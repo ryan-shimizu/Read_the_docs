@@ -12,8 +12,10 @@ fi
 # consts, might be able to re-use in future labs
 TEST_LOG="fir_test.log"
 SYNTH_LOG="fir_csynth.rpt"
+SOURCE_USED="fir.cpp"
+HEADER_USED="fir.h"
 
-COPY_LIST=($TEST_LOG $SYNTH_LOG)
+COPY_LIST=($TEST_LOG $SYNTH_LOG $SOURCE_USED $HEADER_USED)
 
 dir="$1"
 
