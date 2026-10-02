@@ -20,6 +20,11 @@ void fir_no_cond(coef_t *c, data_t *y, data_t x);
 void fir_loop_fission(coef_t *c, data_t *y, data_t x);
 void fir_loop_unroll(coef_t *c, data_t *y, data_t x);
 void fir_array_partition_complete(coef_t *c, data_t *y, data_t x);
+void fir_array_partition_with_loop_fission_complete(coef_t *c, data_t *y, data_t x);
+void fir_array_partition_block(coef_t *c, data_t *y, data_t x);
+void fir_array_partition_cyclic(coef_t *c, data_t *y, data_t x);
+void fir_array_partition_complete_no_unroll(coef_t *c, data_t *y, data_t x);
+void fir_array_partition_with_loop_fission_complete_skipexitcheck(coef_t *c, data_t *y, data_t x);
 
 void fir (
   data_t *y,
@@ -36,7 +41,12 @@ void fir (
 	// fir_no_cond(c, y, x);
 	// fir_loop_fission(c, y, x);
 	// fir_loop_unroll(c, y, x);
-	fir_array_partition_complete(c, y, x);
+	// fir_array_partition_complete(c, y, x);
+	// fir_array_partition_with_loop_fission_complete(c, y, x);
+	// fir_array_partition_block(c, y, x);
+	// fir_array_partition_cyclic(c, y, x);
+	// fir_array_partition_complete_no_unroll(c, y, x);
+	fir_array_partition_with_loop_fission_complete_skipexitcheck(c, y, x);
 }
 
 void fir_unoptimized(coef_t *c, data_t *y, data_t x)
@@ -182,5 +192,102 @@ void fir_array_partition_complete(coef_t *c, data_t *y, data_t x)
 	}
 	acc += x * c[0];
 	shift_reg[0] = x;
+	*y = acc;
+}
+
+void fir_array_partition_with_loop_fission_complete(coef_t *c, data_t *y, data_t x)
+{
+	static
+		data_t shift_reg[N];
+		acc_t acc;
+		int i;
+	#pragma HLS array_partition variable=shift_reg complete
+	TDL:
+	for (i = N - 1; i > 0; i--) {
+		shift_reg[i] = shift_reg[i - 1];
+	}
+	shift_reg[0] = x;
+	acc = 0;
+	MAC:
+	for (i = N - 1; i >= 0; i--) {
+		acc += shift_reg[i] * c[i];
+	}
+	*y = acc;
+}
+
+void fir_array_partition_block(coef_t *c, data_t *y, data_t x)
+{
+	static
+		data_t shift_reg[N];
+		acc_t acc;
+		int i;
+	#pragma HLS array_partition variable=shift_reg block factor=2
+	acc = 0;
+	Shift_Accum_Loop:
+	for (i = N - 1; i > 0; i--){
+		shift_reg[i] = shift_reg[i - 1];
+		acc += shift_reg[i] * c[i];
+	}
+	acc += x * c[0];
+	shift_reg[0] = x;
+	*y = acc;
+}
+
+void fir_array_partition_cyclic(coef_t *c, data_t *y, data_t x)
+{
+	static
+		data_t shift_reg[N];
+		acc_t acc;
+		int i;
+	#pragma HLS array_partition variable=shift_reg cyclic factor=4
+	acc = 0;
+	Shift_Accum_Loop:
+	for (i = N - 1; i > 0; i--){
+		shift_reg[i] = shift_reg[i - 1];
+		acc += shift_reg[i] * c[i];
+	}
+	acc += x * c[0];
+	shift_reg[0] = x;
+	*y = acc;
+}
+
+void fir_array_partition_complete_no_unroll(coef_t *c, data_t *y, data_t x)
+{
+	static
+		data_t shift_reg[N];
+		acc_t acc;
+		int i;
+	#pragma HLS array_partition variable=shift_reg complete
+	acc = 0;
+	Shift_Accum_Loop:
+	for (i = N - 1; i > 0; i--){
+		#pragma HLS unroll off=true
+		shift_reg[i] = shift_reg[i - 1];
+		acc += shift_reg[i] * c[i];
+	}
+	acc += x * c[0];
+	shift_reg[0] = x;
+	*y = acc;
+}
+
+void fir_array_partition_with_loop_fission_complete_skipexitcheck(coef_t *c, data_t *y, data_t x)
+{
+	static
+		data_t shift_reg[N];
+		acc_t acc;
+		int i;
+	#pragma HLS array_partition variable=shift_reg complete
+	TDL:
+	for (i = N - 1; i > 0; i--) {
+		#pragma HLS unroll skip_exit_check factor=32
+		shift_reg[i] = shift_reg[i - 1];
+	}
+	shift_reg[0] = x;
+	acc = 0;
+	MAC:
+	for (i = N - 1; i >= 0; i--) {
+		#pragma HLS unroll skip_exit_check factor=32
+		acc += shift_reg[i] * c[i];
+	}
 	*y = acc;
 }
