@@ -1,0 +1,6 @@
+# ignore logs
+*.logs
+
+# Exceptions
+!fir_test.log
+!fir_csynth.rpt
