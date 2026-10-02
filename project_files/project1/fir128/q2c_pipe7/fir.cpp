@@ -76,7 +76,7 @@ void fir_pipeline_off(coef_t *c, data_t *y, data_t x)
 
 void fir_pipeline_manual(coef_t *c, data_t *y, data_t x)
 {
-	#pragma HLS pipeline II=8
+	#pragma HLS pipeline II=7
 	static
 		data_t shift_reg[N];
 		acc_t acc;
