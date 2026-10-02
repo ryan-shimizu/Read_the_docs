@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # My laziness knows no bounds.
-# This script copies the test logs and synthesis reports from the current directory
+# This script copies the test logs, source, and synthesis reports from the current directory
 # and puts it in a new directory of your choosing
 
 if [ $# -ne 1 ]; then
@@ -20,9 +20,8 @@ COPY_LIST=($TEST_LOG $SYNTH_LOG $SOURCE_USED $HEADER_USED)
 dir="$1"
 
 if [ -d "$dir" ]; then
-    echo "Directory '$dir' already exists. Skipping mkdir..."
+    echo "Directory '$dir' already exists. Remove first before running. Exiting..."
 else
     mkdir "$dir"
+    cp ${COPY_LIST[@]} "$dir"/
 fi
-
-cp ${COPY_LIST[@]} "$dir"/
