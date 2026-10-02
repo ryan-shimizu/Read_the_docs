@@ -26,9 +26,9 @@ void fir (
 	coef_t c[N] = {10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 8, 3, -3, -8, -11, -11, -10, -10, -10, -10, -10, -10, -10, -10, -11, -11, -8, -3, 3, 8, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
 	
 	// Baseline Q1
-	fir_unoptimized(c, y, x);
+	// fir_unoptimized(c, y, x);
 	// fir_pipeline_off(c, y, x);
-	// fir_pipeline_manual(c, y, x);
+	fir_pipeline_manual(c, y, x);
 }
 
 void fir_unoptimized(coef_t *c, data_t *y, data_t x)
@@ -76,7 +76,7 @@ void fir_pipeline_off(coef_t *c, data_t *y, data_t x)
 
 void fir_pipeline_manual(coef_t *c, data_t *y, data_t x)
 {
-	#pragma HLS pipeline II=2
+	#pragma HLS pipeline II=5
 	static
 		data_t shift_reg[N];
 		acc_t acc;
