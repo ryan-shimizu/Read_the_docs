@@ -26,7 +26,7 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 		// onto X-axis
 		int sigma = (current_sin < 0.0f) ? 1 : -1;
 
-		// TODO
+		// Compute shifts for Cartesian coordinates
 		data_t cos_shift = current_cos >> i;
 		data_t sin_shift = current_sin >> i;
 
