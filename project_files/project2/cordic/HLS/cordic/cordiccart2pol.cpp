@@ -53,7 +53,7 @@ data_t angles[NO_ITER] =
     // 1.90734863281019e-06,   // 20
 };
 
-const data_t CORDIC_GAIN = 0.60725293500925f;
+const data_t CORDIC_GAIN = 0.60725293500925;
 
 void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 {
@@ -70,16 +70,18 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 
     // First, rotate initial vector by 90 degrees such that it lands in Quadrant 1 or 4
     const data_t PI_DIV_2_RAD = angles[0] *  2;
-    data_t theta_temp = (y < 0.0f) ? PI_DIV_2_RAD: -PI_DIV_2_RAD;
-    data_t current_cos = (y < 0.0f) ? -y : y;	// abs(x)
-    data_t current_sin = (y < 0.0f) ? x : -x;
+    // Quirk: need to typecast negative versions back to data_t since it will return a type that's one bit wider
+    //        by default and causes a type mismatch.
+    data_t theta_temp = (y < 0) ? PI_DIV_2_RAD: data_t(-PI_DIV_2_RAD);
+    data_t current_cos = (y < 0) ? data_t(-y) : y;	// abs(x)
+    data_t current_sin = (y < 0) ? x : data_t(-x);
 
     // After the vector is in the correct quadrant, we can start converging on the positive X-axis
     for (size_t i = 0; i < NO_ITER; i++)
     {
         // Determine polarity of rotation needed to converge
         // onto X-axis
-        // int sigma = (current_sin < 0.0f) ? 1 : -1;
+        // int sigma = (current_sin < 0) ? 1 : -1;
 
         // Compute shifts for Cartesian coordinates
         // TODO: change data_t to fixed point so we can use LSR to divide by 2 instead of relying on Kvalues
@@ -87,7 +89,7 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
         data_t sin_shift = current_sin * Kvalues[i];
 
         // Apply transform
-        if ( current_sin < 0.0f )
+        if ( current_sin < 0 )
         {
             // Positive rotation
             current_cos = current_cos - sin_shift;
