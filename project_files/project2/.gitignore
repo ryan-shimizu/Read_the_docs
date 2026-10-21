@@ -1,0 +1,3 @@
+!build.tcl
+cordic/HLS/cordic/output_cordiccart2pol/
+cordic/HLS/cordic/vivado_cordiccart2pol/
