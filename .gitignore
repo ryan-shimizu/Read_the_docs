@@ -36,3 +36,4 @@ __pycache__/
 /docs/_build/
 *.ini
 !**/__hls_config__.ini
+project_files/project2/cordic/HLS/cordic_LUT/gen_luts

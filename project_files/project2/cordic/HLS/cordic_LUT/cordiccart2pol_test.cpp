@@ -5,10 +5,10 @@
 #include <ap_fixed.h>
 
 // Look-up tables used in simulation
-#ifndef SYNTHESIS
-data_t my_LUT_th[LUT_SIZE];
-data_t my_LUT_r[LUT_SIZE];
-#endif
+// #ifndef SYNTHESIS
+// data_t my_LUT_th[LUT_SIZE];
+// data_t my_LUT_r[LUT_SIZE];
+// #endif
 
 /// Struct to calculate the error
 struct Rmse
@@ -35,16 +35,19 @@ Rmse rmse_r;
 int main()
 {
 
-#ifndef SYNTHESIS
-	init_cart2pol_LUTs(my_LUT_th, my_LUT_r); // Fill in the LUT for simulation results
-#endif
+// #ifndef SYNTHESIS
+// 	init_cart2pol_LUTs(my_LUT_th, my_LUT_r); // Fill in the LUT for simulation results
+// #endif
 
 	// Compare results from cordiccart2pol against the ground truth
 	float x;
 	float y;
 	data_t r;
 	data_t theta;
-	float min_theta, max_theta, min_r, max_r = 0;
+	float min_theta = 0.0f;
+	float max_theta = 0.0f;
+	float min_r = 0.0f;
+	float max_r = 0.0f;
 
 	float step = .01; //Testbench step size. Smaller means more extensive testbench.
 	int num_steps = (int) 2/step; // assumes x and y are normalized and are between -1 and 1
