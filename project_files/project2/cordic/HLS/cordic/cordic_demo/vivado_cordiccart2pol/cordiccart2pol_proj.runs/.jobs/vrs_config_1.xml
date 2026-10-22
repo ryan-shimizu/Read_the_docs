@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_cordiccart2pol_0_0_synth_1" LaunchDir="/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/vivado_cordiccart2pol/cordiccart2pol_proj.runs/design_1_cordiccart2pol_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ps7_0_axi_periph_imp_auto_pc_0_synth_1" LaunchDir="/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/vivado_cordiccart2pol/cordiccart2pol_proj.runs/design_1_ps7_0_axi_periph_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_rst_ps7_0_50M_0_synth_1" LaunchDir="/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/vivado_cordiccart2pol/cordiccart2pol_proj.runs/design_1_rst_ps7_0_50M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ps7_0_0_synth_1" LaunchDir="/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/vivado_cordiccart2pol/cordiccart2pol_proj.runs/design_1_ps7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/vivado_cordiccart2pol/cordiccart2pol_proj.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_cordiccart2pol_0_0_synth_1"/>
+		<Parent Id="design_1_ps7_0_axi_periph_imp_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_rst_ps7_0_50M_0_synth_1"/>
+		<Parent Id="design_1_ps7_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/vivado_cordiccart2pol/cordiccart2pol_proj.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_1_cordiccart2pol_0_0_synth_1"/>
+		<Parent Id="design_1_ps7_0_axi_periph_imp_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_rst_ps7_0_50M_0_synth_1"/>
+		<Parent Id="design_1_ps7_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

@@ -1,0 +1,120 @@
+<ENTRY>
+{
+ "thisFile": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/cordiccart2pol.comp.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct 21 22:39:17 2026",
+ "timestampMillis": "1792647557828",
+ "buildStep": {
+  "cmdId": "228b4006-0921-4bd3-9d0d-9697521c81d5",
+  "name": "vitis-run",
+  "logFile": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/logs/hls_run_package.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/export_cordiccart2pol.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:39:17 2026",
+ "timestampMillis": "1792647557830",
+ "status": {
+  "cmdId": "228b4006-0921-4bd3-9d0d-9697521c81d5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Oct 21 22:39:17 2026",
+ "timestampMillis": "1792647557831",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cordiccart2pol",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct 21 22:39:17 2026",
+ "timestampMillis": "1792647557832",
+ "buildStep": {
+  "cmdId": "4c841b32-377f-4f59-8099-5371d5d0e242",
+  "name": "export_design",
+  "logFile": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/hls.log",
+  "commandLine": "export_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:39:17 2026",
+ "timestampMillis": "1792647557833",
+ "status": {
+  "cmdId": "4c841b32-377f-4f59-8099-5371d5d0e242",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:40:07 2026",
+ "timestampMillis": "1792647607374",
+ "status": {
+  "cmdId": "4c841b32-377f-4f59-8099-5371d5d0e242",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:40:07 2026",
+ "timestampMillis": "1792647607387",
+ "status": {
+  "cmdId": "228b4006-0921-4bd3-9d0d-9697521c81d5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

@@ -1,0 +1,204 @@
+<ENTRY>
+{
+ "thisFile": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/cordiccart2pol.comp.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512165",
+ "buildStep": {
+  "cmdId": "6ed87969-0d95-48b7-b429-faf2d4ffe8b4",
+  "name": "vitis-run",
+  "logFile": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/logs/hls_compile.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512167",
+ "status": {
+  "cmdId": "6ed87969-0d95-48b7-b429-faf2d4ffe8b4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512169",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cordiccart2pol",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512171",
+ "buildStep": {
+  "cmdId": "8992d39d-7c00-4535-8dee-421ce68517c2",
+  "name": "csynth_design",
+  "logFile": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512174",
+ "status": {
+  "cmdId": "8992d39d-7c00-4535-8dee-421ce68517c2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512176",
+ "report": {
+  "path": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512179",
+ "report": {
+  "path": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct 21 22:38:32 2026",
+ "timestampMillis": "1792647512182",
+ "report": {
+  "path": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct 21 22:38:53 2026",
+ "timestampMillis": "1792647533494",
+ "report": {
+  "path": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct 21 22:38:53 2026",
+ "timestampMillis": "1792647533495",
+ "report": {
+  "path": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Oct 21 22:38:53 2026",
+ "timestampMillis": "1792647533496",
+ "report": {
+  "path": "/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:38:53 2026",
+ "timestampMillis": "1792647533496",
+ "status": {
+  "cmdId": "8992d39d-7c00-4535-8dee-421ce68517c2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Oct 21 22:38:53 2026",
+ "timestampMillis": "1792647533516",
+ "status": {
+  "cmdId": "6ed87969-0d95-48b7-b429-faf2d4ffe8b4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

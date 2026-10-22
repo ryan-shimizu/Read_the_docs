@@ -1,0 +1,51 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/.autopilot/db/cordiccart2pol.pp.0.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_cordiccart2pol.pp.0.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1
+    DebugLoc:        { File: cordiccart2pol.cpp, Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_cordiccart2pol.pp.0.cpp
+    DebugLoc:        { File: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/.autopilot/db/cordiccart2pol.pp.0.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/.autopilot/db/cordiccart2pol.pp.0.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_cordiccart2pol.pp.0.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.2
+    DebugLoc:        { File: cordiccart2pol.cpp, Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_cordiccart2pol.pp.0.cpp
+    DebugLoc:        { File: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project2/cordic/HLS/cordic/cordiccart2pol.comp/hls/.autopilot/db/cordiccart2pol.pp.0.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_cordiccart2pol_ir
+Args:            
+  - Callee:          'cordiccart2pol(ap_fixed<22, 3, (ap_q_mode)0, (ap_o_mode)3, 0>, ap_fixed<22, 3, (ap_q_mode)0, (ap_o_mode)3, 0>, ap_fixed<22, 3, (ap_q_mode)0, (ap_o_mode)3, 0>*, ap_fixed<22, 3, (ap_q_mode)0, (ap_o_mode)3, 0>*)'
+    DebugLoc:        { File: cordiccart2pol.cpp, Line: 59, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_cordiccart2pol_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_80_1
+  - String:          '> at '
+  - LoopLoc:         'cordiccart2pol.cpp:80:22'
+  - String:          ' '
+...

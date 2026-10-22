@@ -19,7 +19,7 @@ typedef int   coef_t;
 //  
 //              min:
 //              typedef ap_fixed<22, 3, AP_RND, AP_WRAP> data_t
-typedef ap_fixed<4, 3, AP_RND, AP_WRAP> data_t;
+typedef ap_fixed<22, 3, AP_RND, AP_WRAP> data_t;
 // typedef ap_fixed<22, 3, AP_RND, AP_WRAP> rotate_t;
 typedef float acc_t;
 
