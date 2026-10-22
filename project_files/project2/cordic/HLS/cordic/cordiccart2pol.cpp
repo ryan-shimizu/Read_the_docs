@@ -1,7 +1,7 @@
 #include "cordiccart2pol.h"
 #include <math.h>
 
-data_t Kvalues[NO_ITER] =
+rotate_t Kvalues[NO_ITER] =
 {
     1,	                    // 1
     0.500000000000000,	    // 2
@@ -27,7 +27,7 @@ data_t Kvalues[NO_ITER] =
     // 1.9073486328125e-06,    // 20
 };
 
-data_t angles[NO_ITER] =
+rotate_t angles[NO_ITER] =
 {
     0.785398163397448,      // 1
     0.463647609000806,      // 2
@@ -85,8 +85,8 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 
         // Compute shifts for Cartesian coordinates
         // TODO: change data_t to fixed point so we can use LSR to divide by 2 instead of relying on Kvalues
-        data_t cos_shift = current_cos >> i;
-        data_t sin_shift = current_sin >> i;
+        data_t cos_shift = current_cos * Kvalues[i];
+        data_t sin_shift = current_sin * Kvalues[i];
 
         // Apply transform
         if ( current_sin < 0 )

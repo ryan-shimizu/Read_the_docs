@@ -17,3 +17,5 @@ cordic/HLS/cordic_LUT/cordiccart2pol.tcl
 !cordic/HLS/cordic/cordic_demo/cordiccart2pol.comp
 !cordic/HLS/cordic/cordic_demo/vivado_cordiccart2pol
 !cordic/HLS/cordic/cordic_demo/export_cordiccart2pol.tcl
+
+!cordic/submission/*/reports/*
