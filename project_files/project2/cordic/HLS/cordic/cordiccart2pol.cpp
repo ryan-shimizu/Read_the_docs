@@ -1,7 +1,7 @@
 #include "cordiccart2pol.h"
 #include <math.h>
 
-data_t Kvalues[NO_ITER] =
+rotate_t Kvalues[NO_ITER] =
 {
     1,	                    // 1
     0.500000000000000,	    // 2
@@ -27,7 +27,7 @@ data_t Kvalues[NO_ITER] =
     // 1.9073486328125e-06,    // 20
 };
 
-data_t angles[NO_ITER] =
+rotate_t angles[NO_ITER] =
 {
     0.785398163397448,      // 1
     0.463647609000806,      // 2
