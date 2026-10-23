@@ -1,7 +1,7 @@
 #include "cordiccart2pol.h"
 #include <math.h>
 
-data_t Kvalues[NO_ITER] =
+internal_lut_t Kvalues[NO_ITER] =
 {
     1,	                    // 1
     0.500000000000000,	    // 2
@@ -27,7 +27,7 @@ data_t Kvalues[NO_ITER] =
     // 1.9073486328125e-06,    // 20
 };
 
-data_t angles[NO_ITER] =
+internal_lut_t angles[NO_ITER] =
 {
     0.785398163397448,      // 1
     0.463647609000806,      // 2
@@ -53,7 +53,7 @@ data_t angles[NO_ITER] =
     // 1.90734863281019e-06,   // 20
 };
 
-const data_t CORDIC_GAIN = 0.60725293500925;
+const internal_var_t CORDIC_GAIN = 0.60725293500925;
 
 void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 {
@@ -64,17 +64,21 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
     #pragma HLS INTERFACE s_axilite port=theta
     #pragma HLS INTERFACE s_axilite port=return
 
+    // convert to fixed point
+    internal_var_t fixed_x = (internal_var_t)x;
+    internal_var_t fixed_y = (internal_var_t)y;
+
     // We want to rotate our vector defined by the Cartesian coordinates, x and y, such that it lands directly
     // on the positive side of the X-axis
     // From there, the amplitude, r, is simply the resulting cos amplitude and theta is the total angle that we rotated our vector to get there
 
     // First, rotate initial vector by 90 degrees such that it lands in Quadrant 1 or 4
-    const data_t PI_DIV_2_RAD = angles[0] *  2;
+    const internal_var_t PI_DIV_2_RAD = angles[0] *  2;
     // Quirk: need to typecast negative versions back to data_t since it will return a type that's one bit wider
     //        by default and causes a type mismatch.
-    data_t theta_temp = (y < 0) ? PI_DIV_2_RAD: data_t(-PI_DIV_2_RAD);
-    data_t current_cos = (y < 0) ? data_t(-y) : y;	// abs(x)
-    data_t current_sin = (y < 0) ? x : data_t(-x);
+    internal_var_t theta_temp = (fixed_y < 0) ? PI_DIV_2_RAD: internal_var_t(-PI_DIV_2_RAD);
+    internal_var_t current_cos = (fixed_y < 0) ? internal_var_t(-fixed_y) : fixed_y;	// abs(y)
+    internal_var_t current_sin = (fixed_y < 0) ? fixed_x : internal_var_t(-fixed_x);
 
     // After the vector is in the correct quadrant, we can start converging on the positive X-axis
     for (size_t i = 0; i < NO_ITER; i++)
@@ -85,8 +89,8 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 
         // Compute shifts for Cartesian coordinates
         // TODO: change data_t to fixed point so we can use LSR to divide by 2 instead of relying on Kvalues
-        data_t cos_shift = current_cos * Kvalues[i];
-        data_t sin_shift = current_sin * Kvalues[i];
+        internal_var_t cos_shift = current_cos * (internal_lut_t)Kvalues[i];
+        internal_var_t sin_shift = current_sin * (internal_lut_t)Kvalues[i];
 
         // Apply transform
         if ( current_sin < 0 )
@@ -104,6 +108,6 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
             theta_temp = theta_temp - angles[i];
         }
     }
-    *r = current_cos * CORDIC_GAIN;
-    *theta = -theta_temp;
+    *r = (data_t)(current_cos * CORDIC_GAIN);
+    *theta = (data_t)(-theta_temp);
 }
