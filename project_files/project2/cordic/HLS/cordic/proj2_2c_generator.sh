@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# sweep_lut.sh -- run from the top-level (staging) directory
-# usage: WVAR=16 ./sweep_lut.sh          (W_VAR fixed at 16, sweep W_LUT over all widths)
-#        ./sweep_lut.sh 8 12             (leave W_VAR as it is in the header, just these widths)
+# proj2_2c_generator.sh -- run from the top-level (staging) directory
+# usage: WVAR=16 ./proj2_2c_generator.sh          (W_VAR fixed at 16, sweep W_LUT over all widths)
+#        ./proj2_2c_generator.sh 8 12             (leave W_VAR as it is in the header, just these widths)
 set -uo pipefail
 
 HDR=cordiccart2pol.h
-PREFIX="cordic_lut"          # output folders: cordic_lut_8, cordic_lut_12, ...
+PREFIX="cordic_2c"          # output folders: cordic_2c_4, cordic_2c_8, ...
 widths=("$@")
 [[ ${#widths[@]} -eq 0 ]] && widths=(4 8 12 16 20 24 32)
 failed=()

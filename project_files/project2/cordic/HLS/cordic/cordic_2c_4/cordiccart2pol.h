@@ -4,6 +4,10 @@
 #include <ap_fixed.h>
 
 #define NO_ITER 16
+#define W_VAR 16
+#define I_VAR 3
+#define W_LUT 4
+#define I_LUT 3
 
 typedef int   coef_t;
 // Question 2a: assuming 16 iterations, the following variables will extend the max bit-width:
@@ -18,9 +22,11 @@ typedef int   coef_t;
 //              therefore, for all 16 iterations to be productive, we need a minimum of W = 19 + 3 = 22 bits
 //  
 //              min:
-//              typedef ap_fixed<22, 3, AP_RND, AP_WRAP> data_t
-typedef ap_fixed<16, 3, AP_RND, AP_WRAP> data_t;
-typedef ap_fixed<4, 3, AP_RND, AP_WRAP> rotate_t;
+//              typedef ap_fixed<22, 3, AP_RND, AP_WRAP> internal_var_t
+typedef float data_t;
+typedef ap_fixed<W_VAR, I_VAR, AP_RND, AP_WRAP> internal_var_t;
+typedef ap_fixed<W_LUT, I_LUT, AP_RND, AP_WRAP> internal_lut_t;
+
 typedef float acc_t;
 
 void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta);

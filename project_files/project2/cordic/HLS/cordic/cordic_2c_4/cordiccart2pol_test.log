@@ -1,28 +1,28 @@
 ---Testing results----------------------------------
-Test: x=0.8147, y=0.1270, golden theta=0.1545, golden r=0.8245, your theta=0.5000, your r=0.8466
-Test: x=0.6323, y=-0.2784, golden theta=-0.4149, golden r=0.6909, your theta=-0.5000, your r=0.6914
+Test: x=0.8147, y=0.1269, golden theta=0.1545, golden r=0.8245, your theta=0.5000, your r=0.8465
+Test: x=0.6323, y=-0.2785, golden theta=-0.4149, golden r=0.6909, your theta=-0.5000, your r=0.6914
 Test: x=-0.5469, y=-0.9575, golden theta=-2.0898, golden r=1.1027, your theta=-2.5000, your r=1.1420
-Test: x=-0.4854, y=0.7003, golden theta=2.1769, golden r=0.8521, your theta=2.5000, your r=0.9000
-Test: x=0.9000, y=0.0000, golden theta=0.0000, golden r=0.9000, your theta=0.5000, your r=0.9564
+Test: x=-0.4854, y=0.7003, golden theta=2.1769, golden r=0.8521, your theta=2.5000, your r=0.9001
+Test: x=0.9000, y=0.0000, golden theta=0.0000, golden r=0.9000, your theta=0.5000, your r=0.9565
 Test: x=0.0000, y=0.7000, golden theta=1.5708, golden r=0.7000, your theta=2.5000, your r=0.7439
 Test: x=-0.8000, y=0.0000, golden theta=3.1416, golden r=0.8000, your theta=3.5000, your r=0.8503
-Test: x=0.0000, y=-0.6000, golden theta=-1.5708, golden r=0.6000, your theta=-1.5000, your r=0.6376
-Test: x=0.5000, y=0.5000, golden theta=0.7854, golden r=0.7071, your theta=1.5000, your r=0.7592
-Test: x=-0.5000, y=0.5000, golden theta=2.3562, golden r=0.7071, your theta=3.5000, your r=0.7592
-Test: x=-0.5000, y=-0.5000, golden theta=-2.3562, golden r=0.7071, your theta=-2.5000, your r=0.7592
-Test: x=0.5000, y=-0.5000, golden theta=-0.7854, golden r=0.7071, your theta=-0.5000, your r=0.7592
-Test: x=0.9510, y=0.0309, golden theta=0.0325, golden r=0.9516, your theta=0.5000, your r=1.0061
-Test: x=0.0309, y=0.9510, golden theta=1.5383, golden r=0.9516, your theta=1.5000, your r=1.0061
-Test: x=-0.0309, y=-0.9510, golden theta=-1.6033, golden r=0.9516, your theta=-2.5000, your r=1.0061
-Test: x=-0.9510, y=-0.0309, golden theta=-3.1091, golden r=0.9516, your theta=-3.5000, your r=1.0061
+Test: x=0.0000, y=-0.6000, golden theta=-1.5708, golden r=0.6000, your theta=-1.5000, your r=0.6375
+Test: x=0.5000, y=0.5000, golden theta=0.7854, golden r=0.7071, your theta=1.5000, your r=0.7591
+Test: x=-0.5000, y=0.5000, golden theta=2.3562, golden r=0.7071, your theta=3.5000, your r=0.7591
+Test: x=-0.5000, y=-0.5000, golden theta=-2.3562, golden r=0.7071, your theta=-2.5000, your r=0.7591
+Test: x=0.5000, y=-0.5000, golden theta=-0.7854, golden r=0.7071, your theta=-0.5000, your r=0.7591
+Test: x=0.9511, y=0.0309, golden theta=0.0325, golden r=0.9516, your theta=0.5000, your r=1.0061
+Test: x=0.0309, y=0.9511, golden theta=1.5383, golden r=0.9516, your theta=1.5000, your r=1.0061
+Test: x=-0.0309, y=-0.9511, golden theta=-1.6033, golden r=0.9516, your theta=-2.5000, your r=1.0061
+Test: x=-0.9511, y=-0.0309, golden theta=-3.1091, golden r=0.9516, your theta=-3.5000, your r=1.0061
 Test: x=0.0123, y=0.0045, golden theta=0.3507, golden r=0.0131, your theta=0.5000, your r=0.0128
-Test: x=-0.0123, y=0.0045, golden theta=2.7909, golden r=0.0131, your theta=3.5000, your r=0.0127
-Test: x=0.9000, y=0.9000, golden theta=0.7854, golden r=1.2728, your theta=1.5000, your r=1.3665
-Test: x=-0.9000, y=-0.9000, golden theta=-2.3562, golden r=1.2728, your theta=-2.5000, your r=1.3665
-Test: x=0.2000, y=-0.9000, golden theta=-1.3521, golden r=0.9220, your theta=-1.5000, your r=0.9260
-Test: x=-0.1000, y=0.9500, golden theta=1.6757, golden r=0.9552, your theta=2.5000, your r=0.9944
+Test: x=-0.0123, y=0.0045, golden theta=2.7909, golden r=0.0131, your theta=3.5000, your r=0.0128
+Test: x=0.9000, y=0.9000, golden theta=0.7854, golden r=1.2728, your theta=1.5000, your r=1.3664
+Test: x=-0.9000, y=-0.9000, golden theta=-2.3562, golden r=1.2728, your theta=-2.5000, your r=1.3664
+Test: x=0.2000, y=-0.9000, golden theta=-1.3521, golden r=0.9220, your theta=-1.5000, your r=0.9261
+Test: x=-0.1000, y=0.9500, golden theta=1.6757, golden r=0.9552, your theta=2.5000, your r=0.9943
 ---RMS error----------------------------------
 ----------------------------------------------
    RMSE(R)           RMSE(Theta)
-0.050089158117771 0.543644785881042
+0.050069887191057 0.543644785881042
 ----------------------------------------------

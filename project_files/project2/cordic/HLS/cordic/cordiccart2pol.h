@@ -4,9 +4,9 @@
 #include <ap_fixed.h>
 
 #define NO_ITER 16
-#define W_VAR 4
+#define W_VAR 32
 #define I_VAR 3
-#define W_LUT 4
+#define W_LUT 32
 #define I_LUT 3
 
 typedef int   coef_t;

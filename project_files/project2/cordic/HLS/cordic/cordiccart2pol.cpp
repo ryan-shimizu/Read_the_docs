@@ -88,9 +88,8 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
         // int sigma = (current_sin < 0) ? 1 : -1;
 
         // Compute shifts for Cartesian coordinates
-        // TODO: change data_t to fixed point so we can use LSR to divide by 2 instead of relying on Kvalues
-        internal_var_t cos_shift = current_cos * (internal_lut_t)Kvalues[i];
-        internal_var_t sin_shift = current_sin * (internal_lut_t)Kvalues[i];
+        internal_var_t cos_shift = current_cos >> i;
+        internal_var_t sin_shift = current_sin >> i;
 
         // Apply transform
         if ( current_sin < 0 )

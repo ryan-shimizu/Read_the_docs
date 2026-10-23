@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# sweep.sh -- run from the top-level (staging) directory
-# usage: ./sweep.sh            (all widths)
-#        ./sweep.sh 8 16       (just these widths; handy for a dry run)
+# proj2_2b_generator.sh -- run from the top-level (staging) directory
+# usage: ./proj2_2b_generator.sh            (all widths)
+#        ./proj2_2b_generator.sh 8 16       (just these widths; handy for a dry run)
 set -uo pipefail
 
 HDR=cordiccart2pol.h
