@@ -11,7 +11,7 @@ SRC_FILES=(__hls_config__.ini cordiccart2pol_test.cpp cordiccart2pol.cpp
 
 # Which width-variant supplies the source/test files for each design
 ARITH_VARIANT=16     # cordic_1a, 2b, 2c, 3a use their _16 folder
-LUT_VARIANT=6        # cordic_LUT: which cordic_4b_x supplies the source (not specified -- adjust)
+LUT_VARIANT=6        # cordic_LUT: which cordic_4b_x supplies the source
 
 warnings=0
 cp_warn() {   # cp_warn <src> <dst>
