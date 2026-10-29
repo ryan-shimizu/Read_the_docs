@@ -1,8 +1,9 @@
-#include<math.h>
+#include <math.h>
 #include "dft.h"
-#include"coefficients32_2D.h"
+#include "coefficients32_2D.h"
 
-void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
+void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE], 
+         DTYPE out_real_sample[SIZE], DTYPE out_imag_sample[SIZE])
 {
     int i, j;
     // TEMP_TYPE w;
@@ -29,14 +30,18 @@ void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 
             // Multiply the current phasor with the appropriate input sample and keep
             // running sum
-            temp_real[i] += (real_sample[j] * c - imag_sample[j] * s);
-            temp_imag[i] += (real_sample[j] * s + imag_sample[j] * c);
+            temp_real[i] += (in_real_sample[j] * c - in_imag_sample[j] * s);
+            temp_imag[i] += (in_real_sample[j] * s + in_imag_sample[j] * c);
         }
+
+        // Assign to output array
+        out_real_sample[i] = temp_real[i];
+        out_imag_sample[i] = temp_imag[i];
     }
 
-    // Perform an inplace DFT, i.e., copy result into the input arrays
-    for (i = 0; i < SIZE; i += 1) {
-        real_sample[i] = temp_real[i];
-        imag_sample[i] = temp_imag[i];
-    }
+    // // Perform an inplace DFT, i.e., copy result into the input arrays
+    // for (i = 0; i < SIZE; i += 1) {
+    //     real_sample[i] = temp_real[i];
+    //     imag_sample[i] = temp_imag[i];
+    // }
 }
