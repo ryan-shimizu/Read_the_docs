@@ -5,6 +5,10 @@
 void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE], 
          DTYPE out_real_sample[SIZE], DTYPE out_imag_sample[SIZE])
 {
+    #pragma HLS ARRAY_PARTITION variable=in_real_sample  type=block factor=4 dim=1
+    #pragma HLS ARRAY_PARTITION variable=in_imag_sample  type=block factor=4 dim=1
+    #pragma HLS ARRAY_PARTITION variable=out_real_sample type=block factor=4 dim=1
+    #pragma HLS ARRAY_PARTITION variable=out_imag_sample type=block factor=4 dim=1
     int i, j;
     // TEMP_TYPE w;
     TEMP_TYPE c, s;
