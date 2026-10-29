@@ -27,6 +27,7 @@ void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE],
 
         // Calculate the jth frequency sample sequentially
         for (j = 0; j < SIZE; j += 1) {
+            #pragma HLS unroll factor=32
             // Use precomputed coefficients instead of HLS math funcs
             // TODO: Experiment with 1D table of N entries instead, need to modify dftgen.py (Question 6)
             c = cos_coeff_table[i][j];
