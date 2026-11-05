@@ -5,10 +5,12 @@
 void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE], 
          DTYPE out_real_sample[SIZE], DTYPE out_imag_sample[SIZE])
 {
-    #pragma HLS ARRAY_PARTITION variable=in_real_sample  type=block factor=4 dim=1
-    #pragma HLS ARRAY_PARTITION variable=in_imag_sample  type=block factor=4 dim=1
-    #pragma HLS ARRAY_PARTITION variable=out_real_sample type=block factor=4 dim=1
-    #pragma HLS ARRAY_PARTITION variable=out_imag_sample type=block factor=4 dim=1
+    #pragma HLS ARRAY_PARTITION variable=in_real_sample type=block factor=8 dim=1
+    #pragma HLS ARRAY_PARTITION variable=in_imag_sample type=block factor=8 dim=1
+    #pragma HLS ARRAY_PARTITION variable=out_real_sample type=block factor=8 dim=1
+    #pragma HLS ARRAY_PARTITION variable=out_imag_sample type=block factor=8 dim=1
+    #pragma HLS ARRAY_PARTITION variable=cos_coeff_table type=block factor=8 dim=2
+    #pragma HLS ARRAY_PARTITION variable=sin_coeff_table type=block factor=8 dim=2
     int i, j;
     // TEMP_TYPE w;
     TEMP_TYPE c, s;
@@ -16,9 +18,11 @@ void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE],
     // Temporary arrays to hold the intermediate frequency domain results
     TEMP_TYPE temp_real[SIZE];
     TEMP_TYPE temp_imag[SIZE];
-    
+    #pragma HLS ARRAY_PARTITION variable=temp_real type=block factor=8 dim=1
+    #pragma HLS ARRAY_PARTITION variable=temp_imag type=block factor=8 dim=1
     // Calculate each frequency domain sample iteratively
     for (i = 0; i < SIZE; i += 1) {
+        #pragma HLS PIPELINE II=1
         temp_real[i] = 0;
         temp_imag[i] = 0;
 
@@ -27,7 +31,6 @@ void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE],
 
         // Calculate the jth frequency sample sequentially
         for (j = 0; j < SIZE; j += 1) {
-            #pragma HLS unroll factor=32
             // Use precomputed coefficients instead of HLS math funcs
             // TODO: Experiment with 1D table of N entries instead, need to modify dftgen.py (Question 6)
             c = cos_coeff_table[i][j];

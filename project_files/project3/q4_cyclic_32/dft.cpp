@@ -9,16 +9,20 @@ void dft(DTYPE in_real_sample[SIZE], DTYPE in_imag_sample[SIZE],
     #pragma HLS ARRAY_PARTITION variable=in_imag_sample type=cyclic factor=32 dim=1
     #pragma HLS ARRAY_PARTITION variable=out_real_sample type=cyclic factor=32 dim=1
     #pragma HLS ARRAY_PARTITION variable=out_imag_sample type=cyclic factor=32 dim=1
+    #pragma HLS ARRAY_PARTITION variable=cos_coeff_table type=cyclic factor=32 dim=2
+    #pragma HLS ARRAY_PARTITION variable=sin_coeff_table type=cyclic factor=32 dim=2
     int i, j;
     // TEMP_TYPE w;
     TEMP_TYPE c, s;
 
     // Temporary arrays to hold the intermediate frequency domain results
     TEMP_TYPE temp_real[SIZE];
+    #pragma HLS ARRAY_PARTITION variable=temp_real type=cyclic factor=32 dim=1
     TEMP_TYPE temp_imag[SIZE];
-    
+    #pragma HLS ARRAY_PARTITION variable=temp_imag type=cyclic factor=32 dim=1
     // Calculate each frequency domain sample iteratively
     for (i = 0; i < SIZE; i += 1) {
+        #pragma HLS PIPELINE II=1
         temp_real[i] = 0;
         temp_imag[i] = 0;
 

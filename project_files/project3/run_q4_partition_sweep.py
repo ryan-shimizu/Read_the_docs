@@ -24,6 +24,10 @@ ARRAYS = [
     ("in_imag_sample", 1),
     ("out_real_sample", 1),
     ("out_imag_sample", 1),
+    ("cos_coeff_table", 2),
+    ("sin_coeff_table", 2),
+    ("temp_real", 1),
+    ("temp_imag", 1),
 ]
 
 # Only block necessary for hw, cyclic and complete for my own curiosity
@@ -50,25 +54,21 @@ def variations():
         else:
             for f in FACTORS:
                 yield t, f
+                
+PRAGMA_RE = re.compile(r"#pragma\s+HLS\s+ARRAY_PARTITION\s+variable\s*=\s*(\w+)", re.I)
+
+def pragma_line(var, dim, ptype, factor):
+    if ptype == "complete":
+        return f"    #pragma HLS ARRAY_PARTITION variable={var} type=complete dim={dim}"
+    return f"    #pragma HLS ARRAY_PARTITION variable={var} type={ptype} factor={factor} dim={dim}"
 
 
-def build_pragmas(ptype, factor):
-    lines = []
-    for var, dim in ARRAYS:
-        if ptype == "complete":
-            lines.append(f"    #pragma HLS ARRAY_PARTITION variable={var} type=complete dim={dim}")
-        else:
-            lines.append(f"    #pragma HLS ARRAY_PARTITION variable={var} type={ptype} factor={factor} dim={dim}")
-    return lines
-
-
-def insert_pragmas(original_text, pragmas):
+def insert_pragmas(original_text, ptype, factor):
     lines = original_text.splitlines()
 
     # drop any ARRAY_PARTITION pragmas already on our arrays so they don't clash
     names = {v for v, _ in ARRAYS}
-    pat = re.compile(r"#pragma\s+HLS\s+ARRAY_PARTITION\s+variable\s*=\s*(\w+)", re.I)
-    lines = [l for l in lines if not ((m := pat.search(l)) and m.group(1) in names)]
+    lines = [l for l in lines if not ((m := PRAGMA_RE.search(l)) and m.group(1) in names)]
 
     # find "void dft(" and then the first "{" at or after it
     start = next((i for i, l in enumerate(lines) if re.search(r"\bvoid\s+dft\s*\(", l)), None)
@@ -78,9 +78,20 @@ def insert_pragmas(original_text, pragmas):
     if brace is None:
         sys.exit("Could not find the opening brace of dft()")
 
-    lines[brace + 1:brace + 1] = pragmas
-    return "\n".join(lines) + "\n"
+    # A pragma must come AFTER the declaration of a local array, but function arguments and
+    # the global coefficient tables have no declaration inside the body. So: if the body
+    # declares `<type> var[...];`, insert right after that line, otherwise at the top.
+    inserts = {}   # line index to insert at -> pragma lines, in ARRAYS order
+    for var, dim in ARRAYS:
+        decl = re.compile(rf"^\s*(?:(?:static|const)\s+)*\w+\s+{re.escape(var)}\s*\[[^;]*;")
+        decl_idx = next((i for i in range(brace + 1, len(lines)) if decl.match(lines[i])), None)
+        at = brace + 1 if decl_idx is None else decl_idx + 1
+        inserts.setdefault(at, []).append(pragma_line(var, dim, ptype, factor))
 
+    # insert from the bottom up so earlier line indices stay valid
+    for at in sorted(inserts, reverse=True):
+        lines[at:at] = inserts[at]
+    return "\n".join(lines) + "\n"
 
 def run(cmd, cwd=None, check=True):
     print(f"  $ {' '.join(cmd)}" + (f"   (in {cwd})" if cwd else ""), flush=True)
@@ -101,7 +112,7 @@ def main():
             name = f"q4_{ptype}" if factor is None else f"q4_{ptype}_{factor}"
             print(f"\n=== {name} ===", flush=True)
 
-            SRC.write_text(insert_pragmas(original, build_pragmas(ptype, factor)))
+            SRC.write_text(insert_pragmas(original, ptype, factor))
             try:
                 for cmd, must_succeed in HLS_STEPS:
                     run(cmd, cwd=HLS_DIR, check=must_succeed)
