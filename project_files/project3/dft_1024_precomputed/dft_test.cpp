@@ -48,13 +48,27 @@ int main()
 	{
 		In_R[i] = i;
 		In_I[i] = 0.0;
-
 	}
-	
+
+	// pack the input frame into the stream, TLAST on the final sample
+	hls::stream<axis_t> in_stream, out_stream;
+	for(int i=0; i<SIZE; i++)
+	{
+		in_stream.write(pack_sample(In_R[i], In_I[i], i == SIZE - 1));
+	}
 
 	// DFT
-	dft(In_R, In_I,Out_R,Out_I);
+	dft(in_stream,out_stream);
 
+	// unpack the output frame and check the framing
+	int last_errors = 0;
+	for(int i=0; i<SIZE; i++)
+	{
+		axis_t pkt = out_stream.read();
+		unpack_sample(pkt, Out_R[i], Out_I[i]);
+		if ((int)pkt.last != (i == SIZE - 1)) last_errors++;
+	}
+	if (!out_stream.empty()) last_errors++;     // extra beats left over
 
 	// comparing with golden output
 	for(int i=0; i<SIZE; i++)

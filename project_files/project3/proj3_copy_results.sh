@@ -22,12 +22,12 @@ TEST_USED="${SOURCE_PREFIX}/${PREFIX}_test.cpp"
 MAKEFILE_USED="${SOURCE_PREFIX}/Makefile"
 CONFIG_INI_USED="${SOURCE_PREFIX}/__hls_config__.ini"
 TCL_GENERATED="${SOURCE_PREFIX}/${PREFIX}.tcl"
+OUTPUT_DFT="${SOURCE_PREFIX}/output_dft/"
 
 # coefficient files
 COEFF_H="${SOURCE_PREFIX}/coefficients${WIDTH}*.h"
 
-
-COPY_LIST=($TEST_LOG $SYNTH_LOG $SOURCE_USED $HEADER_USED $TEST_USED $MAKEFILE_USED $CONFIG_INI_USED $TCL_GENERATED $COEFF_H)
+COPY_LIST=($TEST_LOG $SYNTH_LOG $SOURCE_USED $HEADER_USED $TEST_USED $MAKEFILE_USED $CONFIG_INI_USED $TCL_GENERATED $COEFF_H $OUTPUT_DFT)
 
 dir="$2"
 
@@ -36,5 +36,5 @@ if [ -d "$dir" ]; then
     echo "Directory '$dir' already exists. Remove first before running. Exiting..."
 else
     mkdir "$dir"
-    cp ${COPY_LIST[@]} "$dir"/
+    cp -R ${COPY_LIST[@]} "$dir"/ 2>/dev/null || :
 fi
