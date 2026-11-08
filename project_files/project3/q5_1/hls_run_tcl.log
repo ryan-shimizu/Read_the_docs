@@ -1,0 +1,216 @@
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.tcl'
+INFO: [HLS 200-1510] Running: open_component dft.comp -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp'.
+INFO: [HLS 200-10] Creating and opening solution '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: add_files dft.cpp 
+INFO: [HLS 200-10] Adding design file 'dft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dft_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'dft_test.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top dft 
+Running: set_top dft
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Running: set_part xc7z020clg400-1
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.15 seconds. CPU system time: 0.05 seconds. Elapsed time: 7.78 seconds; current allocated memory: 659.238 MB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0.82 seconds. Elapsed time: 2.03 seconds; current allocated memory: 660.621 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 76 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 363 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 359 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 359 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 357 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 551 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 559 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table': Block partitioning with factor 16 on dimension 2. (./coefficients32_2D.h:39:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table': Block partitioning with factor 16 on dimension 2. (./coefficients32_2D.h:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'in_real_sample': Block partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'in_imag_sample': Block partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'out_real_sample': Block partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'out_imag_sample': Block partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_32_2> at dft.cpp:32:26 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.97 seconds. CPU system time: 0.93 seconds. Elapsed time: 9.26 seconds; current allocated memory: 670.293 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 670.293 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 670.762 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 671.078 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 693.590 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_24_1' (dft.cpp:24:19) in function 'dft' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 694.184 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_32_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_32_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('add5_write_ln41', dft.cpp:41) of variable 'add', dft.cpp:41 on local variable 'add5' and 'fadd' operation 32 bit ('add', dft.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('add5_write_ln41', dft.cpp:41) of variable 'add', dft.cpp:41 on local variable 'add5' and 'fadd' operation 32 bit ('add', dft.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation 0 bit ('add5_write_ln41', dft.cpp:41) of variable 'add', dft.cpp:41 on local variable 'add5' and 'fadd' operation 32 bit ('add', dft.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation 0 bit ('add5_write_ln41', dft.cpp:41) of variable 'add', dft.cpp:41 on local variable 'add5' and 'fadd' operation 32 bit ('add', dft.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'store' operation 0 bit ('add5_write_ln41', dft.cpp:41) of variable 'add', dft.cpp:41 on local variable 'add5' and 'fadd' operation 32 bit ('add', dft.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 20, loop 'VITIS_LOOP_32_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.4 seconds; current allocated memory: 696.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 696.168 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 698.527 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 698.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_32_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dft_Pipeline_VITIS_LOOP_32_2' pipeline 'VITIS_LOOP_32_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft_Pipeline_VITIS_LOOP_32_2'.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15cos_coeff_table_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_9_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_10_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_11_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_12_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_13_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_14_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_32_2_p_ZL15sin_coeff_table_15_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.88 seconds; current allocated memory: 701.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dft' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.45 seconds. CPU system time: 0.1 seconds. Elapsed time: 1.2 seconds; current allocated memory: 706.879 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.51 seconds. CPU system time: 0.33 seconds. Elapsed time: 2.6 seconds; current allocated memory: 712.102 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.49 seconds. CPU system time: 0.11 seconds. Elapsed time: 3.92 seconds; current allocated memory: 721.312 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dft.
+INFO: [VLOG 209-307] Generating Verilog RTL for dft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:29; Allocated memory: 78.074 MB.
+INFO: [HLS 200-112] Total CPU user time: 18.42 seconds. Total CPU system time: 4.23 seconds. Total elapsed time: 43.8 seconds; peak allocated memory: 721.312 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 46s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

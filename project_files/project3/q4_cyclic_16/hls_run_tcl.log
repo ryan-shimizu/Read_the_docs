@@ -1,0 +1,332 @@
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.tcl'
+INFO: [HLS 200-1510] Running: open_component dft.comp -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp'.
+INFO: [HLS 200-10] Creating and opening solution '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: add_files dft.cpp 
+INFO: [HLS 200-10] Adding design file 'dft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dft_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'dft_test.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top dft 
+Running: set_top dft
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Running: set_part xc7z020clg400-1
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 7.77 seconds; current allocated memory: 659.223 MB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.99 seconds. CPU system time: 0.88 seconds. Elapsed time: 2.07 seconds; current allocated memory: 660.605 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 91 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 678 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 531 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 530 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 530 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,642 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 699 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 699 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 699 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 699 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 699 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 699 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 891 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 827 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,053 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,058 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project3/dft_32_precomputed/dft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_33_2' is marked as complete unroll implied by the pipeline pragma (dft.cpp:33:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_33_2' (dft.cpp:33:26) in function 'dft' completely with a factor of 32 (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table': Cyclic partitioning with factor 16 on dimension 2. (./coefficients32_2D.h:39:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table': Cyclic partitioning with factor 16 on dimension 2. (./coefficients32_2D.h:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'in_real_sample': Cyclic partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'in_imag_sample': Cyclic partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'out_real_sample': Cyclic partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'out_imag_sample': Cyclic partitioning with factor 16 on dimension 1. (dft.cpp:7:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_0' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_1' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_2' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_3' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_4' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_5' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_6' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_7' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_8' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_9' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_10' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_11' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_12' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_13' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_14' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15cos_coeff_table_15' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_0' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_1' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_2' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_3' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_4' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_5' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_6' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_7' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_8' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_9' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_10' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_11' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_12' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_13' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_14' dimension 2 completely based on constant index.
+INFO: [HLS 214-449] Automatically partitioning array '_ZL15sin_coeff_table_15' dimension 2 completely based on constant index.
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_0' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_1' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_10' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_11' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_12' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_13' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_14' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_15' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_2' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_3' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_4' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_5' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_6' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_7' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_8' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15cos_coeff_table_9' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_0' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_1' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_10' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_11' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_12' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_13' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_14' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_15' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_2' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_3' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_4' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_5' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_6' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_7' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_8' due to pipeline pragma
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array '_ZL15sin_coeff_table_9' due to pipeline pragma
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_9': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_8': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_7': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_6': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_5': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_4': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_3': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_2': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_15': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_14': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_13': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_12': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_11': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_10': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_1': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15sin_coeff_table_0': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_9': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_8': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_7': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_6': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_5': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_4': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_3': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_2': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_15': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_14': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_13': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_12': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_11': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_10': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_1': Complete partitioning on dimension 2.
+INFO: [HLS 214-248] Applying array_partition to '_ZL15cos_coeff_table_0': Complete partitioning on dimension 2.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.25 seconds. CPU system time: 1.04 seconds. Elapsed time: 11.04 seconds; current allocated memory: 671.578 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0 seconds; current allocated memory: 671.578 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 672.754 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 673.230 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 697.012 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 697.566 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_24_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_24_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 172, loop 'VITIS_LOOP_24_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.51 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.75 seconds; current allocated memory: 703.246 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.4 seconds; current allocated memory: 705.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.42 seconds; current allocated memory: 707.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 708.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_24_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dft_Pipeline_VITIS_LOOP_24_1' pipeline 'VITIS_LOOP_24_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'dft_Pipeline_VITIS_LOOP_24_1' is 20982 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 96 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 128 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft_Pipeline_VITIS_LOOP_24_1'.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_0_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_0_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_1_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_1_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_2_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_2_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_3_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_3_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_4_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_4_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_5_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_5_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_6_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_6_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_7_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_7_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_8_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_8_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_9_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_9_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_10_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_10_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_11_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_11_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_12_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_12_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_13_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_13_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_14_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_14_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_15_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_15_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_0_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_0_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_1_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_1_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_2_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_2_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_3_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_3_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_4_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_4_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_5_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_6_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_6_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_7_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_7_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_8_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_8_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_9_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_10_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_10_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_11_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_11_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_12_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_12_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_13_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_13_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_14_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_14_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15cos_coeff_table_15_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_dft_Pipeline_VITIS_LOOP_24_1_p_ZL15sin_coeff_table_15_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.42 seconds. CPU system time: 0.16 seconds. Elapsed time: 2.57 seconds; current allocated memory: 734.762 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_real_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/in_imag_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_real_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/out_imag_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dft' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.01 seconds. CPU system time: 0.17 seconds. Elapsed time: 1.95 seconds; current allocated memory: 747.113 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.75 seconds. CPU system time: 0.52 seconds. Elapsed time: 4.95 seconds; current allocated memory: 752.426 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 6.26 seconds. CPU system time: 0.14 seconds. Elapsed time: 6.7 seconds; current allocated memory: 768.277 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dft.
+INFO: [VLOG 209-307] Generating Verilog RTL for dft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:39; Allocated memory: 125.055 MB.
+INFO: [HLS 200-112] Total CPU user time: 25.78 seconds. Total CPU system time: 4.8 seconds. Total elapsed time: 53.21 seconds; peak allocated memory: 768.277 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 55s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

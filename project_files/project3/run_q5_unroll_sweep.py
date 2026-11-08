@@ -21,7 +21,7 @@ SRC = Path("dft_32_precomputed/dft.cpp")
 UNROLL_FACTORS = [1, 2, 4, 8, 16, 32]
 
 # Output directory name is <PREFIX>_<factor>
-PREFIX = "q5_test"
+PREFIX = "q5"
 
 HLS_STEPS = [
     (["make", "clean"], False),
