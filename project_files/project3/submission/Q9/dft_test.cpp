@@ -61,7 +61,7 @@ int main()
 	dft(in_stream,out_stream);
 
 	// unpack the output frame and check the framing
-	int last_errors = 0;
+	unsigned last_errors = 0;
 	for(int i=0; i<SIZE; i++)
 	{
 		axis_t pkt = out_stream.read();
@@ -85,8 +85,12 @@ int main()
 	printf("   RMSE(R)           RMSE(I)\n");
 	printf("%0.15f %0.15f\n", rmse_R.error, rmse_I.error);
 	printf("----------------------------------------------\n");
+	printf("----------------------------------------------\n");
+	printf("   Frame errors\n");
+	printf("%u\n", last_errors);
+	printf("----------------------------------------------\n");
 
-	if (rmse_R.error > 0.1 || rmse_I.error > 0.1 ) {
+	if (rmse_R.error > 0.1 || rmse_I.error > 0.1 || last_errors != 0) {
 		fprintf(stdout, "*******************************************\n");
 		fprintf(stdout, "FAIL: Output DOES NOT match the golden output\n");
 		fprintf(stdout, "*******************************************\n");
