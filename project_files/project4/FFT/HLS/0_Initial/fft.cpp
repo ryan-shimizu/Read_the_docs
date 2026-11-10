@@ -13,6 +13,35 @@ OUTPUT:
 #include <math.h>
 #include "fft.h"
 
+unsigned int reverse_bits(unsigned int input) {
+	int rev = 0;
+	for (int i = 0; i < M; i++) {
+		rev = (rev << 1) | (input & 1);
+		input = input >> 1;
+	}
+	return rev;
+}
+
+void bit_reverse(DTYPE X_R[SIZE], DTYPE X_I[SIZE]) {
+	unsigned int reversed;
+	unsigned int i;
+	DTYPE temp;
+	for (i = 0; i < SIZE; i++) {
+		reversed = reverse_bits(i); // Find the bit reversed index
+		if (i <= reversed) {
+			// Swap the real values
+			temp = X_R[i];
+			X_R[i] = X_R[reversed];
+			X_R[reversed] = temp;
+			// Swap the imaginary values
+			temp = X_I[i];
+			X_I[i] = X_I[reversed];
+			X_I[reversed] = temp;
+		}
+	}
+}
+
+
 void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE])
 {
 
@@ -31,7 +60,7 @@ void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE])
 	int N2 = SIZE2;	/* N2=N>>1 */
 
 	/*=====================BEGIN BIT REBERSAL===========================*/
-	// write your code here
+	bit_reverse(X_R, X_I);
 
 	/*++++++++++++++++++++++END OF BIT REVERSAL++++++++++++++++++++++++++*/
 
