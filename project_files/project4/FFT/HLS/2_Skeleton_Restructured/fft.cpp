@@ -8,12 +8,10 @@ OUTPUT:
 */
 
 #include "fft.h"
-
-void bit_reverse(DTYPE X_R[SIZE], DTYPE X_I[SIZE]);
-void fft_stage_first(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]);
-void fft_stages(DTYPE X_R[SIZE], DTYPE X_I[SIZE], int STAGES, DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]);
-void fft_stage_last(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]);
-
+#include "fft_stages.h"
+#include "fft_stages_first.h"
+#include "fft_stages_last.h"
+#include "bit_reverse.h"
 
 void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE])
 {
@@ -42,36 +40,3 @@ void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE])
 	fft_stage_last(Stage9_R, Stage9_I, OUT_R, OUT_I);
 
 }
-
-void bit_reverse(DTYPE X_R[SIZE], DTYPE X_I[SIZE]){
-	//Insert your code here
-
-
-}
-/*=======================BEGIN: FFT=========================*/
-//stage 1
-void fft_stage_first(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]) {
-
-//Insert your code here
-
-}
-
-//stages
-void fft_stages(DTYPE X_R[SIZE], DTYPE X_I[SIZE], int stage, DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]) {
-
-//Insert your code here
-
-}
-
-
-//last stage
-void fft_stage_last(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]) {
-
-//Insert your code here
-
-}
-/*=======================END: FFT=========================*/
-
-
-
-
