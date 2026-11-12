@@ -8,9 +8,10 @@ OUTPUT:
 */
 
 #include "fft.h"
+#include "fft_common.h"
 #include "fft_stages.h"
-#include "fft_stages_first.h"
-#include "fft_stages_last.h"
+#include "fft_stage_first.h"
+#include "fft_stage_last.h"
 #include "bit_reverse.h"
 
 void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE])

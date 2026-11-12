@@ -7,6 +7,7 @@ open_project hls
 set_top fft_stages
 add_files fft_stages.cpp
 add_files fft_stages.h
+add_files fft_common.h
 add_files -tb fft_stages_test.cpp
 add_files -tb out2.gold.dat
 add_files -tb out3.gold.dat

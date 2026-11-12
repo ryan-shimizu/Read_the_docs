@@ -7,6 +7,7 @@ open_project hls
 set_top fft_stage_last
 add_files fft_stage_last.cpp
 add_files fft_stage_last.h
+add_files fft_common.h
 add_files -tb fft_stage_last_test.cpp
 add_files -tb out.gold.dat
 open_solution "solution1"

@@ -7,6 +7,7 @@ open_project hls
 set_top bit_reverse
 add_files bit_reverse.cpp
 add_files bit_reverse.h
+add_files fft_common.h
 add_files -tb bit_reverse_test.cpp
 add_files -tb out.gold.dat
 open_solution "solution1"
