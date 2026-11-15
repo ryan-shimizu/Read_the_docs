@@ -4,7 +4,6 @@
 #include <math.h>
 #include "fft.h"
 
-
 struct Rmse
 {
     int num_sq;
@@ -46,7 +45,6 @@ int main()
 	
 	//Perform FFT
 	fft(In_R, In_I, Out_R, Out_I);
-
     
     // comparing with golden output
     for(int i=0; i<SIZE; i++)
