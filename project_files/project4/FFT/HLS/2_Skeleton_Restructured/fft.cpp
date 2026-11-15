@@ -16,7 +16,7 @@ OUTPUT:
 
 void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE])
 {
-	bit_reverse(X_R, X_I);
+	// bit_reverse(X_R, X_I);
 
 	//Call fft
 	DTYPE Stage1_R[SIZE], Stage1_I[SIZE];
