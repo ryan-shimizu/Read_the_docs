@@ -5,9 +5,11 @@
 ############################################################
 open_project hls_ofdm_rx
 set_top ofdm_receiver
-add_files fft.cpp
-add_files fft.h
+add_files ../2_Skeleton_Restructured/fft.cpp
+add_files ../2_Skeleton_Restructured/fft.h
+add_files ofdm_recvr.h
 add_files ofdm_recvr.cpp
+add_files qpsk_decode.h
 add_files qpsk_decode.cpp
 add_files -tb ofdm_test.cpp
 add_files -tb out.gold.dat

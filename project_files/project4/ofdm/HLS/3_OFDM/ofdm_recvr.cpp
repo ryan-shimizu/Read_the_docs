@@ -1,4 +1,5 @@
-#include "fft.h"
+#include "ofdm_recvr.h"
+#include "demod.h"
 
 static unsigned short count;
 static DTYPE xr[ SIZE ];

@@ -1,5 +1,6 @@
 #ifndef FFT_COMMON_H_
 #define FFT_COMMON_H_
+#include <stdint.h>
 
 typedef float DTYPE;
 typedef int INTTYPE;

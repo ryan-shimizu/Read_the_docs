@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 //#include <fcntl.h>
-#include "fft.h"
+#include "ofdm_recvr.h"
 
 DTYPE In_R[SIZE], In_I[SIZE];
 DTYPE Out_R[SIZE], Out_I[SIZE];
