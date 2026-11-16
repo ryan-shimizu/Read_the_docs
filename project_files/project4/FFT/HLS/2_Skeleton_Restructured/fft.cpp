@@ -29,14 +29,14 @@ void fft(DTYPE X_R[SIZE], DTYPE X_I[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE])
 	DTYPE In_R[SIZE], In_I[SIZE];     // on-chip copy of the input
 	DTYPE Res_R[SIZE], Res_I[SIZE];   // on-chip result buffer
 
-// Burst the input into on-chip RAM first. The copy loop is sequential at II=1,
-// so HLS infers AXI bursts. This is needed because stage 1 reads at
-// bit-reversed (random) addresses, which would be slow directly over AXI.
-// Bit reversal is folded into stage 1's reads. A separate in-place pass would
-// run at II=2 (each swap needs 4 accesses per array, a RAM has 2 ports).
-// Stage 1 reads In_X and writes Stage1_X (different arrays, 2 accesses each),
-// so it stays at II=1. This saves ~2k cycles vs. a separate bit_reverse pass.
-read_in:
+	// Burst the input into on-chip RAM first. The copy loop is sequential at II=1,
+	// so HLS infers AXI bursts. This is needed because stage 1 reads at
+	// bit-reversed (random) addresses, which would be slow directly over AXI.
+	// Bit reversal is folded into stage 1's reads. A separate in-place pass would
+	// run at II=2 (each swap needs 4 accesses per array, a RAM has 2 ports).
+	// Stage 1 reads In_X and writes Stage1_X (different arrays, 2 accesses each),
+	// so it stays at II=1. This saves ~2k cycles vs. a separate bit_reverse pass.
+	read_in:
 	for (int i = 0; i < SIZE; i++) {
 #pragma HLS PIPELINE II=1
 		In_R[i] = X_R[i];
@@ -57,7 +57,7 @@ read_in:
 	DTYPE Stage8_R[SIZE], Stage8_I[SIZE];
 	DTYPE Stage9_R[SIZE], Stage9_I[SIZE];
 
-	fft_stage_first(X_R, X_I, Stage1_R, Stage1_I);
+	fft_stage_first(In_R, In_I, Stage1_R, Stage1_I);
 	fft_stages(Stage1_R, Stage1_I, 2, Stage2_R, Stage2_I);
 	fft_stages(Stage2_R, Stage2_I, 3, Stage3_R, Stage3_I);
 	fft_stages(Stage3_R, Stage3_I, 4, Stage4_R, Stage4_I);
