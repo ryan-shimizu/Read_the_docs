@@ -17,7 +17,10 @@ void ofdm_receiver( DTYPE *X_R, DTYPE *X_I, uint32_t *SYM, int nframes )
 	int   D[SIZE];                         // decoded symbols of one frame
 
 frames:
+// adding trip count hint for synth report
 	for (int f = 0; f < nframes; f++) {
+#pragma HLS LOOP_TRIPCOUNT min=1 max=1 avg=1
+
 		const int base = f * SIZE;
 
 	read_in:

@@ -70,7 +70,7 @@ int main()
             }
         }
     }
-    
+
 	if (result) {
 		fprintf(stdout, "*******************************************\n");
 		fprintf(stdout, "FAIL: Output DOES NOT match the golden output\n");
@@ -81,4 +81,5 @@ int main()
 		fprintf(stdout, "PASS: The output matches the golden output!\n");
 		fprintf(stdout, "*******************************************\n");
 		return result;
+    }
 }

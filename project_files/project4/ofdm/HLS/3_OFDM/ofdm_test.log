@@ -1,0 +1,6 @@
+Reading INPUTS
+read 35000 of 35000 samples
+Comparing with golden output
+*******************************************
+PASS: The output matches the golden output!
+*******************************************

@@ -1,4 +1,7 @@
-!**/fft_csynth.rpt
-!**/fft_test.log
 !**/fft.tcl
 !**/output_fft/*
+!**/ofdm_receiver_csynth.rpt
+!**/ofdm_test.log
+!**/fft_test.log
+!**/fft_csynth.rpt
+!**/logs/hls_run_tcl.log
