@@ -1,73 +1,76 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <fcntl.h>
 #include "ofdm_recvr.h"
-
-DTYPE In_R[SIZE], In_I[SIZE];
-DTYPE Out_R[SIZE], Out_I[SIZE];
-
-//void demod(DTYPE X_R[SIZE], DTYPE X_I[SIZE], int D[SIZE], DTYPE OUT_R[SIZE], DTYPE OUT_I[SIZE]);
 
 int main()
 {
-	const int FSIZE=35000;
-	DTYPE In_R[FSIZE], In_I[FSIZE];
-	FILE *fp;
+    const int FSIZE = 35000;
+    const int NF = FSIZE / SIZE;                       // complete frames (34)
+    static DTYPE    In_R[FSIZE], In_I[FSIZE];
+    static uint32_t Sym[NF * SIZE];
+    static int      gold[FSIZE];
 
-	fp = fopen("input.dat", "r");
+    FILE *fp = fopen("input.dat", "r");
+    if (!fp) { 
+        printf("cannot open input.dat\n"); 
+        return 1;
+    }
+    printf("Reading INPUTS\n");
+    int n_ok = 0;
+    for (int i = 0; i < FSIZE; i++) {
+        if (fscanf(fp, "%f %f\n", &In_R[i], &In_I[i]) == 2) {
+            n_ok++;
+        }
+    }
 
-	printf("Reading INPUTS\n");
-	for (int i = 0; i < FSIZE; i++) {
-		fscanf(fp, "%f %f\n", &In_R[i], &In_I[i]);
-	}
+    fclose(fp);
 
-	fclose(fp);
+    printf("read %d of %d samples\n", n_ok, FSIZE);
 
+    ofdm_receiver(In_R, In_I, Sym, NF);
 
-	//Perform FFT
-	int D[FSIZE] = {0};
-	int dindex = 0;
-	int iindex = 0;
-	DTYPE In_R_block[SIZE], In_I_block[SIZE];
-	DTYPE Out_R_block[SIZE], Out_I_block[SIZE];
-	DTYPE Out_R[FSIZE], Out_I[FSIZE];
+    printf("Comparing with golden output\n");
+    fp = fopen("out.gold.dat", "r");
+    if (!fp) { 
+        printf("cannot open out.gold.dat\n"); 
+        return 1;
+    }
+    for (int i = 0; i < FSIZE; i++) {
+        if (fscanf(fp, "%d", &gold[i]) != 1) {
+            printf("golden file too short at %d\n", i); 
+            return 1; 
+        }
+    }
 
-	int j = 0;
-	for (int i = 0; i < FSIZE; i++) {
-		DTYPE tohw[2];
-		uint32_t from_hw[1];
+    fclose(fp);
 
-		In_R_block[j] = In_R[i];
-		In_I_block[j] = In_I[i];
-		tohw[0] = In_R_block[j];
-		tohw[1] = In_I_block[j];
+    int result = 0, shown = 0;
+    for (int i = 0; i < SIZE; i++) {
+        if (gold[i] != 0) {
+            if (shown++ < 20) {
+                printf("golden[%d] = %d, expected 0\n", i, gold[i]);
+            }
+            result = 1; 
+        }
+    }
 
-		ofdm_receiver( &tohw[0], &from_hw[0] );
-
-		D[dindex] = from_hw[0];
-		dindex++;
-
-	}
-
-	printf("Comparing with golden output\n");
-	fp = fopen("out.gold.dat", "r");
-
-	int gold, result = 0;
-	for( int i=0 ; i < FSIZE ; i++ ){
-		fscanf(fp, "%d", &gold );
-		if (gold != D[i]){
-			printf("miss match: i: %d\tgolden: %d\toutput: %d\n", i, gold, D[i] );
-			result = 1;
-
-		}
-	}
-
-	fclose(fp);
-
-	//Check against golden output.
-	printf ("Comparing against output data \n");
-
+    for (int f = 0; f < NF; f++) {
+        for (int k = 0; k < SIZE; k++) {
+            int g = (f + 1) * SIZE + k;
+            // golden ends part-way through the last frame
+            if (g >= FSIZE) { 
+                break;
+            }                       
+            if (gold[g] != (int)Sym[f * SIZE + k]) {
+                if (shown++ < 20) {
+                    printf("miss match: frame %d bin %d (golden i: %d)\tgolden: %d\toutput: %u\n", f, k, g, gold[g], Sym[f * SIZE + k]);
+                }
+                result = 1;
+            }
+        }
+    }
+    
 	if (result) {
 		fprintf(stdout, "*******************************************\n");
 		fprintf(stdout, "FAIL: Output DOES NOT match the golden output\n");
@@ -78,6 +81,4 @@ int main()
 		fprintf(stdout, "PASS: The output matches the golden output!\n");
 		fprintf(stdout, "*******************************************\n");
 		return result;
-	}
-
 }

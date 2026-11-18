@@ -1,26 +1,38 @@
 #include "ofdm_recvr.h"
 #include "demod.h"
 
-static unsigned short count;
-static DTYPE xr[ SIZE ];
-static DTYPE xi[ SIZE ];
-static DTYPE xr_out[ SIZE ];
-static DTYPE xi_out[ SIZE ];
-static int   dout[ SIZE ];
-
-void ofdm_receiver( volatile DTYPE *inptr, volatile uint32_t *outptr )
+void ofdm_receiver( DTYPE *X_R, DTYPE *X_I, uint32_t *SYM, int nframes )
 {
-#pragma AP interface ap_fifo port=inptr
-#pragma AP interface ap_fifo port=outptr
-#pragma AP interface ap_ctrl_none port=return
+#pragma HLS INTERFACE mode=m_axi port=X_R depth=34816 offset=slave bundle=gmem0
+#pragma HLS INTERFACE mode=m_axi port=X_I depth=34816 offset=slave bundle=gmem1
+#pragma HLS INTERFACE mode=m_axi port=SYM depth=34816 offset=slave bundle=gmem2
+#pragma HLS INTERFACE mode=s_axilite port=X_R     bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=X_I     bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=SYM     bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=nframes bundle=control
+#pragma HLS INTERFACE mode=s_axilite port=return  bundle=control
 
-	*outptr++ = dout[ count ];
+	DTYPE In_R[SIZE], In_I[SIZE];          // on-chip copy of one input frame
+	DTYPE Out_R[SIZE], Out_I[SIZE];        // FFT output (only used inside demod)
+	int   D[SIZE];                         // decoded symbols of one frame
 
-	xr[ count ] = *inptr++;
-	xi[ count ] = *inptr++;
-	count++;
-	if( count == 1024 ){
-		count = 0;
-		demod( xr, xi, dout, xr_out, xi_out );
+frames:
+	for (int f = 0; f < nframes; f++) {
+		const int base = f * SIZE;
+
+	read_in:
+		for (int i = 0; i < SIZE; i++) {
+#pragma HLS PIPELINE II=1
+			In_R[i] = X_R[base + i];
+			In_I[i] = X_I[base + i];
+		}
+
+		demod(In_R, In_I, D, Out_R, Out_I);
+
+	write_out:
+		for (int i = 0; i < SIZE; i++) {
+#pragma HLS PIPELINE II=1
+			SYM[base + i] = D[i];
+		}
 	}
 }
