@@ -1,0 +1,205 @@
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.tcl'
+INFO: [HLS 200-1510] Running: open_component fft.comp -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp'.
+INFO: [HLS 200-10] Creating and opening solution '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: add_files fft.cpp fft.h fft_common.h fft_stage_first.h fft_stage_first.cpp fft_stage_last.h fft_stage_last.cpp fft_stages.h fft_stages.cpp bit_reverse.cpp bit_reverse.h 
+INFO: [HLS 200-10] Adding design file 'fft.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_common.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_first.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_first.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_last.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_last.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stages.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stages.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'bit_reverse.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'bit_reverse.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fft_test.cpp out.gold.dat 
+INFO: [HLS 200-10] Adding test bench file 'fft_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-1510] Running: set_top fft 
+Running: set_top fft
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Running: set_part xc7z020clg400-1
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source directives.tcl
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64=false 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.15 seconds. CPU system time: 0.06 seconds. Elapsed time: 2.77 seconds; current allocated memory: 659.254 MB.
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft_stage_first.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft_stage_last.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft_stages.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'bit_reverse.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'X_R' (bit_reverse.cpp:15:24)
+WARNING: [HLS 207-5292] unused parameter 'X_I' (bit_reverse.cpp:15:41)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.23 seconds. CPU system time: 3.57 seconds. Elapsed time: 6.29 seconds; current allocated memory: 660.961 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 776 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 721 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 611 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 605 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 609 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 607 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 623 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 664 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/2_Skeleton_Restructured/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'reverse_bits(unsigned int)' into 'fft_stage_first(float*, float*, float*, float*)' (fft_stage_first.cpp:24:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_10_1' is marked as complete unroll implied by the pipeline pragma (./bit_reverse.h:10:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_10_1' (./bit_reverse.h:10:19) in function 'fft_stage_first' completely with a factor of 10 (fft_stage_first.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'fft_stage_first(float*, float*, float*, float*)' into 'fft(float*, float*, float*, float*)' (fft.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'fft_stage_last(float*, float*, float*, float*)' into 'fft(float*, float*, float*, float*)' (fft.cpp:35:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.6 seconds. CPU system time: 0.94 seconds. Elapsed time: 8.97 seconds; current allocated memory: 670.645 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 670.645 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 670.926 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 670.969 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 693.098 MB.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_I'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_I'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_I'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_I'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 721.816 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.19 seconds; current allocated memory: 722.781 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 722.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stages_Pipeline_VITIS_LOOP_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_12_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 19, loop 'VITIS_LOOP_12_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 722.805 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 722.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stages' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 722.805 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 722.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 722.805 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 722.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 722.945 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 722.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_Pipeline_VITIS_LOOP_19_1' pipeline 'VITIS_LOOP_19_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_Pipeline_VITIS_LOOP_19_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 723.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stages_Pipeline_VITIS_LOOP_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stages_Pipeline_VITIS_LOOP_12_1' pipeline 'VITIS_LOOP_12_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stages_Pipeline_VITIS_LOOP_12_1'.
+INFO: [RTMG 210-279] Implementing memory 'fft_fft_stages_Pipeline_VITIS_LOOP_12_1_W_real_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft_fft_stages_Pipeline_VITIS_LOOP_12_1_W_imag_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.3 seconds; current allocated memory: 726.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stages' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stages'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 726.957 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 728.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/X_R' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/X_I' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/OUT_R' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/OUT_I' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft'.
+INFO: [RTMG 210-278] Implementing memory 'fft_Stage1_R_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.38 seconds; current allocated memory: 732.566 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.38 seconds. CPU system time: 0.15 seconds. Elapsed time: 1.05 seconds; current allocated memory: 735.504 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.59 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.97 seconds; current allocated memory: 739.520 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:22; Allocated memory: 96.570 MB.
+INFO: [HLS 200-112] Total CPU user time: 15.46 seconds. Total CPU system time: 6.77 seconds. Total elapsed time: 36.23 seconds; peak allocated memory: 739.824 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 38s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

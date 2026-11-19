@@ -1,0 +1,345 @@
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.tcl'
+INFO: [HLS 200-1510] Running: open_component ofdm_receiver.comp -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp'.
+INFO: [HLS 200-10] Creating and opening solution '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: add_files fft.cpp fft.h ofdm_recvr.h ofdm_recvr.cpp qpsk_decode.cpp qpsk_decode.h fft_common.h fft_stage_first.h fft_stage_first.cpp fft_stage_last.h fft_stage_last.cpp fft_stages.h fft_stages.cpp bit_reverse.cpp bit_reverse.h demod.cpp demod.h 
+INFO: [HLS 200-10] Adding design file 'fft.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft.h' to the project
+INFO: [HLS 200-10] Adding design file 'ofdm_recvr.h' to the project
+INFO: [HLS 200-10] Adding design file 'ofdm_recvr.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'qpsk_decode.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'qpsk_decode.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_common.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_first.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_first.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_last.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stage_last.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stages.h' to the project
+INFO: [HLS 200-10] Adding design file 'fft_stages.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'bit_reverse.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'bit_reverse.h' to the project
+INFO: [HLS 200-10] Adding design file 'demod.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'demod.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ofdm_test.cpp out.gold.dat input.dat 
+INFO: [HLS 200-10] Adding test bench file 'ofdm_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-10] Adding test bench file 'input.dat' to the project
+INFO: [HLS 200-1510] Running: set_top ofdm_receiver 
+Running: set_top ofdm_receiver
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Running: set_part xc7z020clg400-1
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.14 seconds. CPU system time: 0.05 seconds. Elapsed time: 7.75 seconds; current allocated memory: 659.297 MB.
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'ofdm_recvr.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'qpsk_decode.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft_stage_first.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft_stage_last.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fft_stages.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'bit_reverse.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'X_R' (bit_reverse.cpp:15:24)
+WARNING: [HLS 207-5292] unused parameter 'X_I' (bit_reverse.cpp:15:41)
+INFO: [HLS 200-10] Analyzing design file 'demod.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.54 seconds. CPU system time: 5.78 seconds. Elapsed time: 10.06 seconds; current allocated memory: 661.137 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 911 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 853 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 729 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 715 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 718 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 714 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 723 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 720 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 720 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 720 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 720 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 733 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 783 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/ofdm/HLS/3_OFDM/ofdm_receiver.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'reverse_bits(unsigned int)' into 'fft_stage_first(float*, float*, float*, float*)' (fft_stage_first.cpp:24:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_7_1' is marked as complete unroll implied by the pipeline pragma (qpsk_decode.cpp:7:18)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_10_1' is marked as complete unroll implied by the pipeline pragma (./bit_reverse.h:10:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_7_1' (qpsk_decode.cpp:7:18) in function 'rev10' completely with a factor of 10 (qpsk_decode.cpp:5:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_10_1' (./bit_reverse.h:10:19) in function 'fft_stage_first' completely with a factor of 10 (fft_stage_first.cpp:18:0)
+INFO: [HLS 214-178] Inlining function 'fft_stage_first(float*, float*, float*, float*)' into 'fft(float*, float*, float*, float*)' (fft.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'fft_stage_last(float*, float*, float*, float*)' into 'fft(float*, float*, float*, float*)' (fft.cpp:35:0)
+INFO: [HLS 214-178] Inlining function 'rev10(int)' into 'qpsk_decode(float*, float*, int*)' (qpsk_decode.cpp:13:0)
+INFO: [HLS 214-178] Inlining function 'qpsk_decode(float*, float*, int*)' into 'demod(float*, float*, int*, float*, float*)' (demod.cpp:6:0)
+INFO: [HLS 214-178] Inlining function 'demod(float*, float*, int*, float*, float*)' into 'ofdm_receiver(float*, float*, unsigned int*, int)' (ofdm_recvr.cpp:5:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'read_in'(ofdm_recvr.cpp:27:3) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ofdm_recvr.cpp:21:2)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'read_in'(ofdm_recvr.cpp:27:3) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ofdm_recvr.cpp:21:2)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'write_out'(ofdm_recvr.cpp:36:3) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ofdm_recvr.cpp:21:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.04 seconds. CPU system time: 1.05 seconds. Elapsed time: 9.35 seconds; current allocated memory: 671.188 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 671.188 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 671.551 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 671.988 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.18 seconds; current allocated memory: 693.934 MB.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_I'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_I'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_R'.
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'Out_I'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'Out_I'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.14 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.21 seconds; current allocated memory: 761.426 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ofdm_receiver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ofdm_receiver_Pipeline_read_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_in'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'read_in'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.23 seconds; current allocated memory: 762.445 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 762.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_19_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_19_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 762.461 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 762.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stages_Pipeline_VITIS_LOOP_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_12_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 19, loop 'VITIS_LOOP_12_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 762.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 762.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_stages' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 762.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 762.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 17, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 762.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 762.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 763.305 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 763.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ofdm_receiver_Pipeline_VITIS_LOOP_15_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_15_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_15_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 763.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 763.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ofdm_receiver_Pipeline_write_out' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'write_out'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'write_out'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 764.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 764.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ofdm_receiver' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 764.559 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 764.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ofdm_receiver_Pipeline_read_in' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ofdm_receiver_Pipeline_read_in' pipeline 'read_in' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem0_0_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_read_in/m_axi_gmem1_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ofdm_receiver_Pipeline_read_in'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.33 seconds; current allocated memory: 764.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_Pipeline_VITIS_LOOP_19_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_Pipeline_VITIS_LOOP_19_1' pipeline 'VITIS_LOOP_19_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_Pipeline_VITIS_LOOP_19_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 766.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stages_Pipeline_VITIS_LOOP_12_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_stages_Pipeline_VITIS_LOOP_12_1' pipeline 'VITIS_LOOP_12_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stages_Pipeline_VITIS_LOOP_12_1'.
+INFO: [RTMG 210-279] Implementing memory 'ofdm_receiver_fft_stages_Pipeline_VITIS_LOOP_12_1_W_real_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ofdm_receiver_fft_stages_Pipeline_VITIS_LOOP_12_1_W_imag_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.29 seconds; current allocated memory: 769.117 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_stages' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_stages'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 769.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft_Pipeline_VITIS_LOOP_20_1' pipeline 'VITIS_LOOP_20_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 771.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft'.
+INFO: [RTMG 210-278] Implementing memory 'ofdm_receiver_fft_Stage1_R_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.32 seconds; current allocated memory: 775.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ofdm_receiver_Pipeline_VITIS_LOOP_15_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ofdm_receiver_Pipeline_VITIS_LOOP_15_1' pipeline 'VITIS_LOOP_15_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ofdm_receiver_Pipeline_VITIS_LOOP_15_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 777.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ofdm_receiver_Pipeline_write_out' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ofdm_receiver_Pipeline_write_out' pipeline 'write_out' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ofdm_receiver_Pipeline_write_out/m_axi_gmem2_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ofdm_receiver_Pipeline_write_out'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.36 seconds; current allocated memory: 777.508 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ofdm_receiver' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/X_R' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/X_I' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/SYM' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ofdm_receiver/nframes' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ofdm_receiver' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'X_R', 'X_I', 'SYM', 'nframes' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ofdm_receiver'.
+INFO: [RTMG 210-278] Implementing memory 'ofdm_receiver_In_R_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'ofdm_receiver_Out_R_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'ofdm_receiver_D_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.42 seconds; current allocated memory: 780.355 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.48 seconds. CPU system time: 0.22 seconds. Elapsed time: 1.57 seconds; current allocated memory: 783.668 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.46 seconds. CPU system time: 0.16 seconds. Elapsed time: 1.95 seconds; current allocated memory: 792.723 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ofdm_receiver.
+INFO: [VLOG 209-307] Generating Verilog RTL for ofdm_receiver.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:35; Allocated memory: 149.426 MB.
+INFO: [HLS 200-112] Total CPU user time: 19.57 seconds. Total CPU system time: 9.32 seconds. Total elapsed time: 49.07 seconds; peak allocated memory: 792.723 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 51s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
