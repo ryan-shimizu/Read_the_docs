@@ -1,5 +1,5 @@
 !**/fft.tcl
-!**/output_fft/*
+# !**/output_fft/*
 !**/ofdm_receiver_csynth.rpt
 !**/ofdm_test.log
 !**/fft_test.log

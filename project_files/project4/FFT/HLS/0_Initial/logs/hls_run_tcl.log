@@ -1,0 +1,271 @@
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.tcl'
+INFO: [HLS 200-1510] Running: open_component fft.comp -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp'.
+INFO: [HLS 200-10] Creating and opening solution '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: add_files fft.cpp fft.h 
+INFO: [HLS 200-10] Adding design file 'fft.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'fft.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fft_test.cpp out.gold.dat 
+INFO: [HLS 200-10] Adding test bench file 'fft_test.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-1510] Running: set_top fft 
+Running: set_top fft
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Running: set_part xc7z020clg400-1
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_loop_tripcount -min 1024 -max 1024 -avg 1024 fft/bit_reverse0 
+INFO: [HLS 200-1510] Running: set_directive_loop_tripcount -min 10 -max 10 -avg 10 fft/bit_reverse1 
+INFO: [HLS 200-1510] Running: set_directive_loop_tripcount -min 2 -max 1024 fft/butterfly 
+INFO: [HLS 200-1510] Running: set_directive_loop_tripcount -min 2 -max 1024 fft/DFTpts 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.16 seconds. CPU system time: 0.06 seconds. Elapsed time: 7.8 seconds; current allocated memory: 659.223 MB.
+INFO: [HLS 200-10] Analyzing design file 'fft.cpp' ... 
+WARNING: [HLS 200-1986] Could not apply LOOP_TRIPCOUNT directive, invalid function, label, or variable (/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/directives.tcl:6)
+WARNING: [HLS 200-1986] Could not apply LOOP_TRIPCOUNT directive, invalid function, label, or variable (/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/directives.tcl:7)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.96 seconds. CPU system time: 0.81 seconds. Elapsed time: 2.05 seconds; current allocated memory: 660.770 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 19,425 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,538 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 932 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 892 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 590 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 675 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 565 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 565 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 565 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 571 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 571 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 592 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 627 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 581 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 585 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 602 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/fft.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'reverse_bits(unsigned int)' into 'bit_reverse(float*, float*)' (fft.cpp:25:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:437:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:437:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((23) + (1))) + (29)) + (3)> table_lookup_4oPi_hotbm<23, 29>(int, float)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:437:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int clz<29, 58, 0>(ap_ufixed<58, 0, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:437:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const (.47.56.67.76)' into 'fp_struct<float>::to_float() const (.44.53.64.73)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:322:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const (.44.53.64.73)' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0)
+INFO: [HLS 214-178] Inlining function 'clz(int) (.26146)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:257:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::set_mantissa(ap_ufixed<24, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:257:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:257:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:210:0)
+INFO: [HLS 214-178] Inlining function 'void range_redux_payne_hanek_hotbm<29, float, 29, 29>(float, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<float>::EXP_BITS>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:210:0)
+INFO: [HLS 214-178] Inlining function 'ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0> hotbm_::value_list<float>::sin_or_cos_approximation<29, 29>(bool, ap_uint<3>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<29, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<8>&)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:210:0)
+INFO: [HLS 214-178] Inlining function 'void scaled_fixed2ieee<29, 1>(ap_ufixed<29, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, float&, int)' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:210:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float hotbm_::sin_or_cos<float>(float, bool, bool)' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:210:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::cos(float)' into 'cosf' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/sincosfloat.cpp:11:0)
+INFO: [HLS 214-178] Inlining function 'cosf' into 'std::cos(float)' (/software/common/Xilinx_Vitis/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:185:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::sin(float)' into 'sinf' (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/sincosfloat.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'sinf' into 'std::sin(float)' (/software/common/Xilinx_Vitis/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:426:0)
+INFO: [HLS 214-178] Inlining function 'bit_reverse(float*, float*)' into 'fft(float*, float*)' (fft.cpp:46:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10value_listIfE24sin_or_cos_approximationILi29ELi29EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi8EEE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_float.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIfEET_S1_bbE13neg_cos_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:217:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIfEET_S1_bbE13neg_sin_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:216:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIfEET_S1_bbE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:215:0)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:242:30)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_float.cpp:25:67)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:267:8)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:289:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_29_1> at fft.cpp:29:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DFTpts> at fft.cpp:90:11 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:282:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:268:41 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_18_1' is marked as complete unroll implied by the pipeline pragma (fft.cpp:18:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_18_1' (fft.cpp:18:19) in function 'fft' completely with a factor of 10 (fft.cpp:46:0)
+INFO: [HLS 214-421] Automatically partitioning small array 'out_bits' completely based on array size. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:268:17)
+INFO: [HLS 214-421] Automatically partitioning small array 'c' completely based on array size. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:281:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'out_bits.i' due to pipeline pragma (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:268:17)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'c.i' due to pipeline pragma (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:281:9)
+INFO: [HLS 214-248] Applying array_partition to 'out_bits.i': Complete partitioning on dimension 1. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:268:17)
+INFO: [HLS 214-248] Applying array_partition to 'c.i': Complete partitioning on dimension 1. (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:281:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.01 seconds. CPU system time: 1.29 seconds. Elapsed time: 10.97 seconds; current allocated memory: 671.559 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 671.559 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 674.250 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 677.828 MB.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1024 to 512 for loop 'butterfly' (/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/directives.tcl:8:9) in function 'fft'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 512) < AVE (= 513)) for loop 'butterfly' (/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project4/FFT/HLS/0_Initial/directives.tcl:8:9) in function 'fft'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:209:18) to (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:282:5) in function 'hotbm_::sin_or_cos<float>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:252:40) to (/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:287:5) in function 'hotbm_::sin_or_cos<float>'... converting 9 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.2 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.26 seconds; current allocated memory: 702.262 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 743.270 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<float>_Pipeline_1' to 'sin_or_cos_float_Pipeline_1'.
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<float>_Pipeline_2' to 'sin_or_cos_float_Pipeline_2'.
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<float>' to 'sin_or_cos_float_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_Pipeline_VITIS_LOOP_29_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_1'.
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_VITIS_LOOP_29_1' (loop 'VITIS_LOOP_29_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_1_write_ln39', fft.cpp:39->fft.cpp:63) of variable 'temp', fft.cpp:37->fft.cpp:63 on array 'X_I' and 'load' operation 32 bit ('X_I_load', fft.cpp:38->fft.cpp:63) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_VITIS_LOOP_29_1' (loop 'VITIS_LOOP_29_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_1_write_ln39', fft.cpp:39->fft.cpp:63) of variable 'temp', fft.cpp:37->fft.cpp:63 on array 'X_I' and 'load' operation 32 bit ('X_I_load', fft.cpp:38->fft.cpp:63) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 3, Depth = 3, loop 'VITIS_LOOP_29_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.27 seconds; current allocated memory: 744.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 744.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_float_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'sin_or_cos<float>_Pipeline_1': contains subloop(s) that are not unrolled.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 744.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 744.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_float_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'sin_or_cos<float>_Pipeline_2': contains subloop(s) that are not unrolled.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 744.242 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 744.242 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for function 'sin_or_cos<float>': contains subfunction 'sin_or_cos<float>_Pipeline_1' which is not pipelined.
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for function 'sin_or_cos<float>': contains subfunction 'sin_or_cos<float>_Pipeline_1' which is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 744.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 744.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft_Pipeline_DFTpts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DFTpts'.
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_write_ln98', fft.cpp:98) of variable 'bitcast_ln98_1', fft.cpp:98 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_write_ln98', fft.cpp:98) of variable 'bitcast_ln98_1', fft.cpp:98 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_write_ln98', fft.cpp:98) of variable 'bitcast_ln98_1', fft.cpp:98 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_write_ln98', fft.cpp:98) of variable 'bitcast_ln98_1', fft.cpp:98 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_2_write_ln100', fft.cpp:100) of variable 'bitcast_ln100_1', fft.cpp:100 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_2_write_ln100', fft.cpp:100) of variable 'bitcast_ln100_1', fft.cpp:100 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'fft_Pipeline_DFTpts' (loop 'DFTpts'): Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 1) between 'store' operation 0 bit ('X_I_addr_2_write_ln100', fft.cpp:100) of variable 'bitcast_ln100_1', fft.cpp:100 on array 'X_I' and 'load' operation 32 bit ('X_I_load_1', fft.cpp:94) on array 'X_I'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 25, Depth = 25, loop 'DFTpts'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 745.086 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 745.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 745.496 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 745.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_Pipeline_VITIS_LOOP_29_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_Pipeline_VITIS_LOOP_29_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 745.582 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_float_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'ctlz_32_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_float_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 746.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_float_Pipeline_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sin_or_cos_float_Pipeline_2' pipeline 'Loop 1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_float_Pipeline_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 747.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'ctlz_30_30_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_15ns_15ns_30_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_15ns_15s_30_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_23s_22ns_45_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_30s_29ns_58_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_80s_24ns_80_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_33_4_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_float_s'.
+INFO: [RTMG 210-279] Implementing memory 'fft_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'fft_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.53 seconds; current allocated memory: 750.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft_Pipeline_DFTpts' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft_Pipeline_DFTpts'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.54 seconds; current allocated memory: 754.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/X_R' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft/X_I' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.41 seconds; current allocated memory: 756.719 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.5 seconds. CPU system time: 0.18 seconds. Elapsed time: 1.85 seconds; current allocated memory: 758.781 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.77 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.22 seconds; current allocated memory: 763.035 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:28; Allocated memory: 120.086 MB.
+INFO: [HLS 200-112] Total CPU user time: 19.68 seconds. Total CPU system time: 4.76 seconds. Total elapsed time: 48.3 seconds; peak allocated memory: 763.309 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 50s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
