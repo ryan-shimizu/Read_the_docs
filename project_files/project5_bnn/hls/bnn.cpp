@@ -1,6 +1,12 @@
 #include "bnn.h"
 
-
+static unsigned int popcount32(unsigned int x)
+{
+	x = x - ((x >> 1) & 0x55555555u);
+	x = (x & 0x33333333u) + ((x >> 2) & 0x33333333u);
+	x = (x + (x >> 4)) & 0x0F0F0F0Fu;
+	return (x * 0x01010101u) >> 24;
+}
 
 
 void bnn(DTYPE IN[SIZE], ITYPE ys[10])
@@ -13,11 +19,49 @@ void bnn(DTYPE IN[SIZE], ITYPE ys[10])
 	static const unsigned int w3[20] = {3898795476,3841654544,1999377659,478627577,2610578576,437068610,3468252685,2057174436,897088322,3798044925,1579394953,2235493397,3540262854,4032889344,754882725,164846975,2388600203,4282835672,2195028258,626363423};
 
 
-	// Write your code here
-	for(int i=0;i<10;i++) {
-		ys[i] = i;
+	unsigned int l1[4];   // 128 bits
+	unsigned int l2[2];   // 64 bits
+	#pragma HLS ARRAY_PARTITION variable=l1 complete
+	#pragma HLS ARRAY_PARTITION variable=l2 complete
+
+	for (int k = 0; k < 4; k++) l1[k] = 0;
+	for (int k = 0; k < 2; k++) l2[k] = 0;
+
+	// Layer 1: 800 -> 128
+	L1: for (int i = 0; i < 128; i++) {
+		int m = 0;
+		L1_dot: for (int j = 0; j < 25; j++) {
+			#pragma HLS PIPELINE II=1
+			unsigned int a = IN[j];
+			unsigned int w = w1[i * 25 + j];
+			m += popcount32(~(a ^ w));
+		}
+		int act = 2 * m - 816;                 // 2*(m-16) - 784
+		unsigned int bit = (act > 0) ? 0u : 1u;  // +1 -> 0, -1 -> 1
+		l1[i >> 5] |= bit << (31 - (i & 31));
 	}
 
+	// Layer 2: 128 -> 64
+	L2: for (int i = 0; i < 64; i++) {
+		int m = 0;
+		L2_dot: for (int j = 0; j < 4; j++) {
+			#pragma HLS UNROLL
+			m += popcount32(~(l1[j] ^ w2[i * 4 + j]));
+		}
+		int act = 2 * m - 128;
+		unsigned int bit = (act > 0) ? 0u : 1u;
+		l2[i >> 5] |= bit << (31 - (i & 31));
+	}
+
+	// Layer 3: 64 -> 10 (raw scores, no sign)
+	L3: for (int i = 0; i < 10; i++) {
+		int m = 0;
+		L3_dot: for (int j = 0; j < 2; j++) {
+			#pragma HLS UNROLL
+			m += popcount32(~(l2[j] ^ w3[i * 2 + j]));
+		}
+		ys[i] = 2 * m - 64;
+	}
 }
 
 
