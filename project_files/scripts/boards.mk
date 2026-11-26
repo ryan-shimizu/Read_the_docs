@@ -10,10 +10,12 @@ ifeq ($(USE_VITIS),1)
 HLS_COMPILER ?= vitis-run --mode hls --tcl
 # Vitis 2025 bundles HLS without exposing a vitis_hls launcher on PATH.
 VITIS_HLS_PATH ?= $(shell command -v vitis_hls 2>/dev/null || command -v vitis-run 2>/dev/null)
-VHLS ?= $(abspath $(dir $(VITIS_HLS_PATH))/..)
+# VHLS ?= $(abspath $(dir $(VITIS_HLS_PATH))/..)
+VHLS = /software/common/Xilinx_Vitis/Vitis/2024.2
 else
 HLS_COMPILER ?= vivado_hls -f
-VHLS ?= $(shell vivado_hls -r)
+# VHLS ?= $(shell vivado_hls -r)
+VHLS = /software/common/Xilinx_Vitis/Vitis/2024.2
 endif
 HLS_INPUT ?= $(TOP).cpp
 HLS_CONFIG_FILE ?= $(CURDIR)/__hls_config__.ini
