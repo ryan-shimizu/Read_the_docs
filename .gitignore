@@ -2,7 +2,7 @@
 **/*.proj/
 **/*.prj/
 **/*.comp/
-**/logs/
+# **/logs/
 *.rpt
 *.tcl
 *.log

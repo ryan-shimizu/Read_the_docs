@@ -1,0 +1,187 @@
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.tcl'
+INFO: [HLS 200-1510] Running: open_component bnn.comp -reset 
+INFO: [HLS 200-10] Creating and opening project '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp'.
+INFO: [HLS 200-10] Creating and opening solution '/home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: add_files bnn.cpp bnn.h 
+INFO: [HLS 200-10] Adding design file 'bnn.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'bnn.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb bnn_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'bnn_test.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top bnn 
+Running: set_top bnn
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Running: set_part xc7z020clg400-1
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: source directives.tcl
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.12 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.71 seconds; current allocated memory: 659.195 MB.
+INFO: [HLS 200-10] Analyzing design file 'bnn.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.15 seconds. CPU system time: 1.06 seconds. Elapsed time: 6.53 seconds; current allocated memory: 660.598 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 218 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 439 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 426 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 411 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 411 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 471 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 453 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 453 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 453 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 436 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 436 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 423 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 543 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 427 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 431 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 456 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'L3_dot' (bnn.cpp:49:11) in function 'bnn' completely with a factor of 4 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'L2_dot' (bnn.cpp:38:11) in function 'bnn' completely with a factor of 8 (bnn.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to 'l1': Complete partitioning on dimension 1. (bnn.cpp:15:17)
+INFO: [HLS 214-248] Applying array_partition to 'l2': Complete partitioning on dimension 1. (bnn.cpp:16:17)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_20_1> at bnn.cpp:20:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_21_2> at bnn.cpp:21:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< L2> at bnn.cpp:36:6 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< L3> at bnn.cpp:47:6 
+INFO: [HLS 214-437] Automatically disabling loop flattening for loop 'L1'. (bnn.cpp:23:6)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=4 dim=1' for array 'golden_w2' due to pipeline pragma (./golden.h:445:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'golden_w3' due to pipeline pragma (./golden.h:480:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w3': Cyclic partitioning with factor 2 on dimension 1. (./golden.h:480:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w2': Cyclic partitioning with factor 4 on dimension 1. (./golden.h:445:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.16 seconds. CPU system time: 1.01 seconds. Elapsed time: 8.61 seconds; current allocated memory: 670.375 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 670.375 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 672.359 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 673.320 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (bnn.cpp:20:28) to (bnn.cpp:20:19) in function 'bnn'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (bnn.cpp:21:28) to (bnn.cpp:21:19) in function 'bnn'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'bnn' (bnn.cpp:13:6)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 696.273 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 726.336 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'bnn' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'popcount16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'popcount16'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, function 'popcount16'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.17 seconds; current allocated memory: 727.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 727.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L1_dot' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L1_dot'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'L1_dot'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 727.285 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 727.285 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'L2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 727.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 727.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'L3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 727.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 727.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 728.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 728.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'popcount16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'popcount16' pipeline 'popcount16' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'popcount16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 728.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L1_dot' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L1_dot' pipeline 'L1_dot' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L1_dot'.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_dot_golden_w1_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 730.508 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L2' pipeline 'L2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L2'.
+INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_0_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_1_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_2_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_3_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 731.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L3' pipeline 'L3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L3'.
+INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_0_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_1_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.27 seconds; current allocated memory: 733.836 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'bnn/IN_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'bnn/ys' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'bnn' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 735.844 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.34 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.99 seconds; current allocated memory: 740.035 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.38 seconds. CPU system time: 0.09 seconds. Elapsed time: 0.67 seconds; current allocated memory: 743.469 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for bnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for bnn.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.52 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:22; Allocated memory: 100.555 MB.
+INFO: [HLS 200-112] Total CPU user time: 17.31 seconds. Total CPU system time: 4.18 seconds. Total elapsed time: 35.26 seconds; peak allocated memory: 743.750 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 37s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
