@@ -395,7 +395,7 @@ class BNN_MNIST:
 
     def pack_bits16(self, bits):
         """Pack 0/1 bits along the last axis into int16 words, MSB first.
-        bit 1 means -1 and bit 0 means +1 (same as quantize()).
+        bit 1 means -1 and bit 0 means +1 (same encoding as quantize()).
         (..., n) -> (..., n // 16)
         """
         bits = np.asarray(bits).astype(np.int64)
@@ -407,8 +407,19 @@ class BNN_MNIST:
         return words.astype(np.int16)
 
     @staticmethod
-    def _write_c_array(f, ctype, name, arr, per_line=16):
-        flat = np.asarray(arr).flatten()
+    def _write_c_array(f, ctype, name, arr, per_line=16, two_d=False):
+        """Write a C++ array. two_d=True emits name[rows][cols] with one braced
+        row per line (used for weights, so HLS can partition per neuron or per word).
+        Otherwise the array is flattened row-major."""
+        arr = np.asarray(arr)
+        if two_d:
+            rows, cols = arr.shape
+            f.write("static const {} {}[{}][{}] = {{\n".format(ctype, name, rows, cols))
+            for r in range(rows):
+                f.write("    {" + ", ".join(str(int(v)) for v in arr[r]) + "},\n")
+            f.write("};\n\n")
+            return
+        flat = arr.flatten()
         f.write("static const {} {}[{}] = {{\n".format(ctype, name, flat.size))
         for i in range(0, flat.size, per_line):
             f.write("    " + ", ".join(str(int(v)) for v in flat[i:i + per_line]) + ",\n")
@@ -416,13 +427,13 @@ class BNN_MNIST:
 
     def generate_golden_header(self, num_samples=10, path="../hls/golden.h"):
         """Writes a C++ header with packed inputs, packed weights and golden
-        outputs (from the XNOR reference model) for an HLS testbench."""
+        outputs (from the XNOR reference model) for an HLS design and testbench."""
         import os
         os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
 
         mnist = np.load("dataset/mnist_test_data_original.npy", allow_pickle=True)
         X = np.reshape(mnist.item().get("data"), (10000, 784))[:num_samples]
-        y = np.asarray(mnist.item().get("label"))[:num_samples].astype(int)
+        y = np.asarray(mnist.item().get("label")).flatten()[:num_samples].astype(int)
 
         # Inputs: binarize to +-1, then bit = 1 where the value is -1
         in_bits = (self.sign(self.adj(X)) == -1).astype(int)       # (N, 784)
@@ -433,7 +444,7 @@ class BNN_MNIST:
         w2 = self.pack_bits16(self.fc2w_qntz)                      # (64, 8)
         w3 = self.pack_bits16(self.fc3w_qntz)                      # (10, 4)
 
-        # Golden outputs from the XNOR model
+        # Golden outputs from the XNOR model, one sample at a time
         golden = np.zeros((num_samples, 10), dtype=np.int32)
         for k in range(num_samples):
             golden[k] = self.feed_forward_quantized(X[k:k + 1])[0]
@@ -448,15 +459,15 @@ class BNN_MNIST:
             f.write("#define L2_WORDS  {}    // 128 bits / 16 per neuron (64 neurons)\n".format(w2.shape[1]))
             f.write("#define L3_WORDS  {}    // 64 bits / 16 per neuron (10 neurons)\n\n".format(w3.shape[1]))
             f.write("// Packing: 16 bits per int16, MSB first, bit 1 = -1, bit 0 = +1.\n")
-            f.write("// All arrays are row-major.\n\n")
+            f.write("// Weights are 2D [neuron][word]; inputs and outputs are flat, row-major.\n\n")
 
-            self._write_c_array(f, "int16_t", "golden_inputs", inputs)       # [N][49]
-            self._write_c_array(f, "int16_t", "golden_w1", w1)               # [128][49]
-            self._write_c_array(f, "int16_t", "golden_w2", w2)               # [64][8]
-            self._write_c_array(f, "int16_t", "golden_w3", w3)               # [10][4]
-            self._write_c_array(f, "int32_t", "golden_outputs", golden)      # [N][10]
-            self._write_c_array(f, "int32_t", "golden_labels", y)            # [N]
-            self._write_c_array(f, "int32_t", "golden_pred", pred)           # [N]
+            self._write_c_array(f, "int16_t", "golden_inputs", inputs)             # [N*49]
+            self._write_c_array(f, "int16_t", "golden_w1", w1, two_d=True)         # [128][49]
+            self._write_c_array(f, "int16_t", "golden_w2", w2, two_d=True)         # [64][8]
+            self._write_c_array(f, "int16_t", "golden_w3", w3, two_d=True)         # [10][4]
+            self._write_c_array(f, "int32_t", "golden_outputs", golden)            # [N*10]
+            self._write_c_array(f, "int32_t", "golden_labels", y)                  # [N]
+            self._write_c_array(f, "int32_t", "golden_pred", pred)                 # [N]
 
             f.write("#endif // GOLDEN_H\n")
 
@@ -491,4 +502,3 @@ if __name__ == "__main__":
     elif run_option == 8:
         print("Generating hls/golden.h")
         bnn.generate_golden_header(num_samples=10)
-    #

@@ -20,50 +20,50 @@ INFO: [HLS 200-1510] Running: create_clock -period 10
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-1510] Running: source directives.tcl
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.12 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.71 seconds; current allocated memory: 659.195 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.12 seconds. CPU system time: 0.04 seconds. Elapsed time: 7.72 seconds; current allocated memory: 659.195 MB.
 INFO: [HLS 200-10] Analyzing design file 'bnn.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.15 seconds. CPU system time: 1.06 seconds. Elapsed time: 6.53 seconds; current allocated memory: 660.598 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.25 seconds. CPU system time: 1.11 seconds. Elapsed time: 6.92 seconds; current allocated memory: 660.719 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 218 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 439 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 426 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 411 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 411 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 471 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 453 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 453 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 453 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 436 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 436 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 423 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 543 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 427 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 431 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 456 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-186] Unrolling loop 'L3_dot' (bnn.cpp:49:11) in function 'bnn' completely with a factor of 4 (bnn.cpp:14:0)
-INFO: [HLS 214-186] Unrolling loop 'L2_dot' (bnn.cpp:38:11) in function 'bnn' completely with a factor of 8 (bnn.cpp:14:0)
-INFO: [HLS 214-248] Applying array_partition to 'l1': Complete partitioning on dimension 1. (bnn.cpp:15:17)
-INFO: [HLS 214-248] Applying array_partition to 'l2': Complete partitioning on dimension 1. (bnn.cpp:16:17)
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_20_1> at bnn.cpp:20:19 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_21_2> at bnn.cpp:21:19 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< L2> at bnn.cpp:36:6 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< L3> at bnn.cpp:47:6 
-INFO: [HLS 214-437] Automatically disabling loop flattening for loop 'L1'. (bnn.cpp:23:6)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=4 dim=1' for array 'golden_w2' due to pipeline pragma (./golden.h:445:0)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'golden_w3' due to pipeline pragma (./golden.h:480:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w3': Cyclic partitioning with factor 2 on dimension 1. (./golden.h:480:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w2': Cyclic partitioning with factor 4 on dimension 1. (./golden.h:445:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.16 seconds. CPU system time: 1.01 seconds. Elapsed time: 8.61 seconds; current allocated memory: 670.375 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 670.375 MB.
+INFO: [HLS 200-1995] There were 256 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,251 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,492 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,326 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,326 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20,537 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,159 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,159 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,159 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,291 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,291 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,159 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,159 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,159 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,163 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,176 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/linux/ieng6/students/192/r4shimizu/Desktop/rshimizu_git_fork/Read_the_docs/project_files/project5_bnn/hls/bnn.comp/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'L3_dot' is marked as complete unroll implied by the pipeline pragma (bnn.cpp:76:11)
+INFO: [HLS 214-291] Loop 'L2_dot' is marked as complete unroll implied by the pipeline pragma (bnn.cpp:64:11)
+INFO: [HLS 214-291] Loop 'L1_pe' is marked as complete unroll implied by the pipeline pragma (bnn.cpp:48:10)
+INFO: [HLS 214-186] Unrolling loop 'L3_dot' (bnn.cpp:76:11) in function 'bnn' completely with a factor of 4 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'L2_dot' (bnn.cpp:64:11) in function 'bnn' completely with a factor of 8 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'L1_act' (bnn.cpp:54:10) in function 'bnn' completely with a factor of 128 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'L1_pe' (bnn.cpp:48:10) in function 'bnn' completely with a factor of 128 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_39_3' (bnn.cpp:39:19) in function 'bnn' completely with a factor of 4 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_35_2' (bnn.cpp:35:19) in function 'bnn' completely with a factor of 8 (bnn.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_1' (bnn.cpp:31:19) in function 'bnn' completely with a factor of 128 (bnn.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w3': Complete partitioning on dimension 2. (./golden.h:248:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w2': Complete partitioning on dimension 2. (./golden.h:181:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL9golden_w1': Complete partitioning on dimension 1. (./golden.h:50:0)
+INFO: [HLS 214-248] Applying array_partition to 'l1': Complete partitioning on dimension 1. (bnn.cpp:24:17)
+INFO: [HLS 214-248] Applying array_partition to 'l2': Complete partitioning on dimension 1. (bnn.cpp:25:17)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.59 seconds. CPU system time: 0.95 seconds. Elapsed time: 8.88 seconds; current allocated memory: 670.410 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 670.410 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 672.359 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 675.238 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 673.320 MB.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (bnn.cpp:20:28) to (bnn.cpp:20:19) in function 'bnn'... converting 3 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (bnn.cpp:21:28) to (bnn.cpp:21:19) in function 'bnn'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 675.848 MB.
 INFO: [XFORM 203-11] Balancing expressions in function 'bnn' (bnn.cpp:13:6)...10 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 696.273 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 726.336 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.5 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 702.535 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.41 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.44 seconds; current allocated memory: 734.777 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'bnn' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -71,117 +71,249 @@ INFO: [HLS 200-42] -- Implementing module 'popcount16'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'popcount16'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, function 'popcount16'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'popcount16'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.17 seconds; current allocated memory: 727.270 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.44 seconds; current allocated memory: 736.680 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 727.270 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 736.680 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L1_dot' 
+INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'L1_dot'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'L1_dot'
+INFO: [SCHED 204-61] Pipelining loop 'L1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'L1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 727.285 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.9 seconds; current allocated memory: 750.566 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 727.285 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.52 seconds; current allocated memory: 750.566 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'L2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'L2'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'L2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 727.770 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.6 seconds; current allocated memory: 750.566 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 727.770 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 750.566 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'bnn_Pipeline_L3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'L3'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'L3'
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'L3'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 727.770 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 750.566 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 727.770 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 750.566 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'bnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 728.094 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 751.938 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 728.094 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 752.277 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'popcount16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'popcount16' pipeline 'popcount16' pipeline type 'function pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'popcount16'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 728.094 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 753.055 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L1_dot' 
+INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L1_dot' pipeline 'L1_dot' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L1_dot'.
-INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_dot_golden_w1_ROM_AUTO_1R' using auto ROMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 730.508 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L1' pipeline 'L1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L1'.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_0_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_1_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_2_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_3_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_4_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_5_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_6_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_7_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_8_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_9_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_10_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_11_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_12_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_13_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_14_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_15_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_16_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_17_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_18_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_19_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_20_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_21_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_22_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_23_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_24_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_25_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_26_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_27_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_28_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_29_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_30_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_31_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_32_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_33_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_34_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_35_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_36_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_37_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_38_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_39_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_40_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_41_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_42_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_43_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_44_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_45_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_46_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_47_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_48_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_49_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_50_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_51_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_52_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_53_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_54_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_55_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_56_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_57_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_58_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_59_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_60_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_61_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_62_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_63_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_64_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_65_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_66_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_67_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_68_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_69_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_70_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_71_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_72_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_73_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_74_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_75_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_76_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_77_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_78_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_79_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_80_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_81_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_82_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_83_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_84_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_85_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_86_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_87_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_88_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_89_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_90_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_91_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_92_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_93_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_94_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_95_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_96_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_97_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_98_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_99_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_100_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_101_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_102_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_103_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_104_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_105_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_106_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_107_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_108_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_109_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_110_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_111_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_112_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_113_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_114_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_115_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_116_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_117_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_118_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_119_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_120_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_121_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_122_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_123_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_124_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_125_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_126_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L1_p_ZL9golden_w1_127_ROM_1P_LUTRAM_1R' using distributed ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.26 seconds. CPU system time: 0.17 seconds. Elapsed time: 2.48 seconds; current allocated memory: 769.965 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L2' pipeline 'L2' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L2'.
-INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_0_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
-INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_1_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
-INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_2_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
-INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_3_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 731.016 MB.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L2_p_ZL9golden_w2_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.11 seconds. CPU system time: 0.2 seconds. Elapsed time: 1.65 seconds; current allocated memory: 804.180 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'bnn_Pipeline_L3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bnn_Pipeline_L3' pipeline 'L3' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn_Pipeline_L3'.
-INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_0_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
-INFO: [HLS 200-2168] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_1_ROM_AUTO_1R' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.27 seconds; current allocated memory: 733.836 MB.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'bnn_bnn_Pipeline_L3_p_ZL9golden_w3_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.33 seconds; current allocated memory: 807.520 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'bnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-500] Setting interface mode on port 'bnn/IN_r' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'bnn/ys' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'bnn' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_16_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'bnn'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 735.844 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.34 seconds. CPU system time: 0.13 seconds. Elapsed time: 0.99 seconds; current allocated memory: 740.035 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.38 seconds. CPU system time: 0.09 seconds. Elapsed time: 0.67 seconds; current allocated memory: 743.469 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 812.035 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.03 seconds. CPU system time: 1.05 seconds. Elapsed time: 8.31 seconds; current allocated memory: 821.297 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.18 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.55 seconds; current allocated memory: 837.891 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for bnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for bnn.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 137.52 MHz
-INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:22; Allocated memory: 100.555 MB.
-INFO: [HLS 200-112] Total CPU user time: 17.31 seconds. Total CPU system time: 4.18 seconds. Total elapsed time: 35.26 seconds; peak allocated memory: 743.750 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 37s
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:42; Allocated memory: 194.695 MB.
+INFO: [HLS 200-112] Total CPU user time: 25.29 seconds. Total CPU system time: 5.51 seconds. Total elapsed time: 57.01 seconds; peak allocated memory: 837.891 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 58s
 INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
