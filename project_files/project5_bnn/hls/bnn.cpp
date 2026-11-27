@@ -17,8 +17,12 @@ void bnn(DTYPE IN[SIZE], ITYPE ys[10])
 	#pragma HLS ARRAY_PARTITION variable=l1 complete
 	#pragma HLS ARRAY_PARTITION variable=l2 complete
 
-	for (int k = 0; k < 8; k++) l1[k] = 0;
-	for (int k = 0; k < 4; k++) l2[k] = 0;
+	for (int k = 0; k < 8; k++) {
+		l1[k] = 0;
+	}
+	for (int k = 0; k < 4; k++) {
+		l2[k] = 0;
+	}
 
 	L1: for (int i = 0; i < 128; i++) {
 		int m = 0;
